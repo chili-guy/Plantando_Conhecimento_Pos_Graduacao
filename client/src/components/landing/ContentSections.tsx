@@ -1,0 +1,335 @@
+import { motion } from "framer-motion";
+import { ArrowRight, CheckCircle2, Award, BookOpen, Users, Calendar, ShieldCheck, Microscope, Leaf, Scale, HeartHandshake } from "lucide-react";
+import problemImage from "@assets/generated_images/veterinarian_examining_a_dog_in_modern_clinic.png";
+import scienceImage from "@assets/generated_images/abstract_endocannabinoid_system_illustration.png";
+
+// Animation variants
+const fadeIn = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
+
+export function ProblemSection() {
+  return (
+    <section className="py-24 bg-white">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <motion.div 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeIn}
+            className="space-y-6"
+          >
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">
+              A medicina veterinária mudou — <span className="text-primary">e sua formação acompanhou essa evolução?</span>
+            </h2>
+            <div className="space-y-4 text-lg text-muted-foreground">
+              <p>
+                Tutores mais exigentes buscam terapias que vão além do convencional. 
+                Os casos clínicos tornam-se cada vez mais complexos e crônicos.
+              </p>
+              <ul className="space-y-3 mt-4">
+                {[
+                  "Necessidade de terapias seguras e naturais",
+                  "Abordagens baseadas em evidências científicas",
+                  "Falta de formação aprofundada em Endocanabinologia"
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-primary" />
+                    <span className="text-foreground font-medium">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </motion.div>
+          <motion.div 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeIn}
+            className="relative"
+          >
+            <div className="absolute -inset-4 bg-primary/10 rounded-2xl -z-10 blur-xl"></div>
+            <img 
+              src={problemImage} 
+              alt="Veterinário moderno examinando paciente" 
+              className="rounded-xl shadow-2xl w-full object-cover aspect-[4/3]"
+            />
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function SolutionSection() {
+  const cards = [
+    { icon: Microscope, title: "Ciência Aplicada", desc: "Protocolos baseados nas últimas pesquisas internacionais." },
+    { icon: Users, title: "Prática Clínica Real", desc: "Discuta casos reais e aprenda a prescrever com segurança." },
+    { icon: Scale, title: "Segurança Jurídica", desc: "Entenda a legislação e proteja sua atuação profissional." },
+    { icon: Leaf, title: "Abordagem Integrativa", desc: "Una a medicina tradicional às novas terapias naturais." }
+  ];
+
+  return (
+    <section className="py-24 bg-muted/30">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="text-center mb-16 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
+            Uma especialização criada para quem quer <span className="text-primary">ir além do óbvio</span>
+          </h2>
+          <p className="text-muted-foreground text-lg">
+            O conhecimento que separa os veterinários comuns das referências de mercado.
+          </p>
+        </div>
+
+        <motion.div 
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
+        >
+          {cards.map((card, i) => (
+            <motion.div 
+              key={i}
+              variants={fadeIn}
+              className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-border/50"
+            >
+              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                <card.icon className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-bold mb-3">{card.title}</h3>
+              <p className="text-muted-foreground">{card.desc}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
+export function WhatIsSection() {
+  return (
+    <section className="py-24 bg-foreground text-white overflow-hidden relative">
+      <div className="absolute inset-0 z-0 opacity-20">
+         <img src={scienceImage} alt="Sistema Endocanabinoide" className="w-full h-full object-cover" />
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-r from-foreground via-foreground/90 to-transparent z-10"></div>
+      
+      <div className="container mx-auto px-4 md:px-6 relative z-20">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeIn}
+          >
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6 text-white">
+              O que é o <span className="text-accent">Sistema Endocanabinoide?</span>
+            </h2>
+            <p className="text-gray-300 text-lg mb-6 leading-relaxed">
+              Descoberto há poucas décadas, é o maestro fisiológico do organismo. 
+              Ele regula o equilíbrio (homeostase) de quase todos os sistemas do corpo animal, 
+              desde o controle da dor e inflamação até o humor e apetite.
+            </p>
+            <div className="space-y-4">
+              <div className="flex gap-4 p-4 bg-white/5 rounded-lg backdrop-blur-sm border border-white/10">
+                <div className="w-1 h-full bg-accent rounded-full"></div>
+                <div>
+                  <h4 className="font-bold text-accent mb-1">Essencial para a Saúde</h4>
+                  <p className="text-sm text-gray-300">Sem ele, o corpo não responde adequadamente a doenças.</p>
+                </div>
+              </div>
+              <div className="flex gap-4 p-4 bg-white/5 rounded-lg backdrop-blur-sm border border-white/10">
+                <div className="w-1 h-full bg-accent rounded-full"></div>
+                <div>
+                  <h4 className="font-bold text-accent mb-1">Uso Ético e Seguro</h4>
+                  <p className="text-sm text-gray-300">A cannabis medicinal atua diretamente nesses receptores para restaurar o equilíbrio.</p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+          <div className="hidden md:block">
+            {/* Illustration handled by background for layout cleanliness, or could be a specific infographic SVG here */}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function UniqueSection() {
+  const features = [
+    { title: "Pioneirismo Mundial", desc: "A 1ª Pós-graduação do mundo inteiramente dedicada à área." },
+    { title: "Certificação MEC", desc: "Diploma reconhecido e válido em todo território nacional." },
+    { title: "Mentoria Expert", desc: "Acompanhamento próximo com os maiores nomes da área." },
+    { title: "Conteúdo Vivo", desc: "Atualizações constantes conforme a ciência avança." },
+  ];
+
+  return (
+    <section className="py-24 bg-white">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold">
+            Por que esta pós-graduação é <span className="text-primary">única no mundo?</span>
+          </h2>
+        </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {features.map((f, i) => (
+            <div key={i} className="group p-6 rounded-2xl bg-muted/20 border border-transparent hover:border-primary/20 hover:bg-white hover:shadow-xl transition-all duration-300">
+              <Award className="w-10 h-10 text-primary mb-4 group-hover:scale-110 transition-transform" />
+              <h3 className="text-xl font-bold mb-2">{f.title}</h3>
+              <p className="text-muted-foreground">{f.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function ModulesSection() {
+  const modules = [
+    "Fundamentos da Endocanabinologia",
+    "Fisiologia e Farmacologia",
+    "Aplicações Clínicas em Pequenos Animais",
+    "Neurologia e Controle da Dor",
+    "Oncologia e Cuidados Paliativos",
+    "Casos Clínicos Complexos",
+    "Legislação e Prescrição Segura",
+    "Comunicação e Carreira"
+  ];
+
+  return (
+    <section className="py-24 bg-background">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+          <div>
+            <span className="text-primary font-bold tracking-wider uppercase text-sm">Cronograma</span>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mt-2">O que você vai aprender</h2>
+          </div>
+          <button className="px-6 py-3 bg-white border border-primary text-primary font-bold rounded-full hover:bg-primary/5 transition-colors">
+            Ver grade completa
+          </button>
+        </div>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {modules.map((mod, i) => (
+            <div key={i} className="flex items-start p-4 bg-white rounded-lg border border-border shadow-sm">
+              <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-sm mr-3">
+                {i + 1}
+              </span>
+              <span className="font-medium text-foreground">{mod}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function TimelineSection() {
+  return (
+    <section className="py-24 bg-white border-y border-border/50">
+      <div className="container mx-auto px-4 md:px-6">
+        <h2 className="text-3xl font-heading font-bold text-center mb-16">Como funciona sua jornada</h2>
+        <div className="relative">
+          {/* Line */}
+          <div className="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gray-200 -translate-y-1/2 z-0"></div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
+            {[
+              { icon: BookOpen, title: "Aulas Online", desc: "Ao vivo e gravadas" },
+              { icon: Users, title: "Mentoria", desc: "Encontros com experts" },
+              { icon: Microscope, title: "Prática", desc: "Discussão de casos" },
+              { icon: Award, title: "Certificação", desc: "Reconhecida pelo MEC" }
+            ].map((step, i) => (
+              <div key={i} className="flex flex-col items-center text-center bg-white p-4">
+                <div className="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center mb-4 shadow-lg ring-4 ring-white">
+                  <step.icon className="w-8 h-8" />
+                </div>
+                <h3 className="text-lg font-bold mb-1">{step.title}</h3>
+                <p className="text-sm text-muted-foreground">{step.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function PartnersSection() {
+  return (
+    <section className="py-16 bg-muted/30">
+      <div className="container mx-auto px-4 md:px-6 text-center">
+        <p className="text-sm font-bold text-muted-foreground uppercase tracking-widest mb-8">Certificação e Parceria</p>
+        <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-80 grayscale hover:grayscale-0 transition-all duration-500">
+           {/* Placeholder for logos - styled as text for now */}
+           <div className="text-2xl font-heading font-black text-primary flex items-center gap-2">
+             <Leaf className="w-8 h-8" />
+             Plantando Conhecimento
+           </div>
+           <div className="text-2xl font-heading font-bold text-gray-700 flex items-center gap-2">
+             <HeartHandshake className="w-8 h-8" />
+             Universidade Anhanguera
+           </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function TestimonialsSection() {
+  return (
+    <section className="py-24 bg-white">
+      <div className="container mx-auto px-4 md:px-6">
+        <h2 className="text-3xl font-heading font-bold text-center mb-16">Quem já está transformando a carreira</h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          {[1, 2, 3].map((i) => (
+            <div key={i} className="bg-background p-8 rounded-2xl border border-border/50 shadow-sm relative">
+              <div className="text-primary text-4xl font-serif absolute top-6 right-6">"</div>
+              <p className="text-muted-foreground mb-6 italic">
+                "Essa pós-graduação mudou completamente minha visão clínica. Hoje consigo tratar pacientes que antes eu considerava sem solução."
+              </p>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-gray-200 overflow-hidden">
+                  <img src={`https://ui-avatars.com/api/?name=Vet+${i}&background=0D1117&color=fff`} alt="Avatar" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-sm">Dra. Ana Souza</h4>
+                  <p className="text-xs text-muted-foreground">Veterinária Integrativa</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function GuaranteeSection() {
+  return (
+    <section className="py-16 bg-background border-t border-border">
+      <div className="container mx-auto px-4 md:px-6 flex flex-col items-center text-center">
+        <ShieldCheck className="w-16 h-16 text-primary mb-6" />
+        <h2 className="text-2xl font-bold mb-2">Garantia Incondicional de 14 Dias</h2>
+        <p className="text-muted-foreground max-w-lg mb-8">
+          Se você não sentir que este conteúdo é para você, devolvemos 100% do seu investimento. Seu risco é zero.
+        </p>
+      </div>
+    </section>
+  );
+}
