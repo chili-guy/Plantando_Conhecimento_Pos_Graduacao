@@ -1,19 +1,18 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import heroPerson from "@assets/generated_images/female_veterinarian_in_green_scrubs_with_pets_background.png";
 
 export function Hero() {
   return (
     <section className="relative min-h-[90vh] md:min-h-screen flex items-center bg-[#062d2d] overflow-hidden">
-      {/* Background elements from the reference */}
+      {/* Background Image - Using the provided image directly */}
       <div className="absolute inset-0 z-0">
         <img 
-          src={heroPerson} 
+          src="/attached_assets/image_1767655170020.png" 
           alt="Veterinária e Animais" 
-          className="w-full h-full object-cover opacity-60 md:opacity-100 object-right md:object-center"
+          className="w-full h-full object-cover object-center md:object-right"
         />
-        {/* Gradient overlays to match the reference look */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#062d2d] via-[#062d2d]/80 to-transparent"></div>
+        {/* Subtle overlay to ensure text readability if needed, though the image already has it */}
+        <div className="absolute inset-0 bg-black/10 md:bg-transparent"></div>
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10 pt-12 md:pt-0">
@@ -66,7 +65,7 @@ export function Hero() {
           </motion.div>
           
           <div className="hidden md:block">
-            {/* The person image is handled by the background for better responsive control in this layout */}
+            {/* Image is handled by the absolute background */}
           </div>
         </div>
       </div>
