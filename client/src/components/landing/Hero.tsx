@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import heroImage from "@assets/generated_images/modern_academic_medical_office_entrance.png";
+import heroImage from "@assets/generated_images/modern_luxury_office_reception_desk.png";
 
 export function Hero() {
   return (
@@ -9,7 +9,7 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         <img 
           src={heroImage} 
-          alt="Academia de Medicina Moderna" 
+          alt="Recepção de Escritório Moderno" 
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/80 to-transparent"></div>
