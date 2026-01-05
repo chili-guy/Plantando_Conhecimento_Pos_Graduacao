@@ -67,8 +67,8 @@ export function ProblemSection() {
           >
             <div className="absolute -inset-4 bg-primary/10 rounded-2xl -z-10 blur-xl"></div>
             <img 
-              src={problemImage} 
-              alt="Veterinário moderno examinando paciente" 
+              src="/cannabis-dog.png" 
+              alt="Administração de cannabis medicinal em cão" 
               className="rounded-xl shadow-2xl w-full object-cover aspect-[4/3]"
             />
           </motion.div>
