@@ -1,5 +1,10 @@
-import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle2, Award, BookOpen, Users, Calendar, ShieldCheck, Microscope, Leaf, Scale, HeartHandshake } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
+import { 
+  ArrowRight, CheckCircle2, Award, BookOpen, Users, 
+  Microscope, Leaf, Scale, HeartHandshake, ChevronDown, 
+  Clock, ShieldCheck 
+} from "lucide-react";
 import problemImage from "@assets/generated_images/veterinarian_examining_a_dog_in_modern_clinic.png";
 import scienceImage from "@assets/generated_images/abstract_endocannabinoid_system_illustration.png";
 
@@ -161,7 +166,6 @@ export function WhatIsSection() {
             </div>
           </motion.div>
           <div className="hidden md:block">
-            {/* Illustration handled by background for layout cleanliness, or could be a specific infographic SVG here */}
           </div>
         </div>
       </div>
@@ -200,39 +204,175 @@ export function UniqueSection() {
 }
 
 export function ModulesSection() {
+  const [openModule, setOpenModule] = useState<number | null>(null);
+
   const modules = [
-    "Fundamentos da Endocanabinologia",
-    "Fisiologia e Farmacologia",
-    "Aplicações Clínicas em Pequenos Animais",
-    "Neurologia e Controle da Dor",
-    "Oncologia e Cuidados Paliativos",
-    "Casos Clínicos Complexos",
-    "Legislação e Prescrição Segura",
-    "Comunicação e Carreira"
+    {
+      title: "Fundamentos da Endocanabinologia",
+      desc: "Base científica do Sistema Endocanabinoide e seus componentes",
+      duration: "40h",
+      topics: [
+        "História da Cannabis Medicinal",
+        "Anatomia do Sistema Endocanabinoide",
+        "Receptores e Ligantes",
+        "Mecanismos de Ação"
+      ]
+    },
+    {
+      title: "Fitoquímica e Farmacologia",
+      desc: "Compostos da Cannabis e suas propriedades terapêuticas",
+      duration: "50h",
+      topics: [
+        "Fitocanabinoides: THC, CBD, CBG, CBN e outros",
+        "Terpenos e efeito entourage",
+        "Farmacocinética e farmacodinâmica",
+        "Formas farmacêuticas e vias de administração",
+        "Interações medicamentosas"
+      ]
+    },
+    {
+      title: "Aplicações Clínicas em Pequenos Animais",
+      desc: "Protocolos terapêuticos para cães e gatos",
+      duration: "60h",
+      topics: [
+        "Manejo da Dor Crônica",
+        "Neurologia Veterinária",
+        "Oncologia Integrativa",
+        "Doenças Inflamatórias"
+      ]
+    },
+    {
+      title: "Casos Clínicos e Prática",
+      desc: "Estudos de casos reais e discussões práticas",
+      duration: "50h",
+      topics: [
+        "Discussão de Prontuários",
+        "Acompanhamento de Pacientes",
+        "Ajuste de Dosagens",
+        "Manejo de Efeitos Adversos"
+      ]
+    },
+    {
+      title: "Aspectos Jurídicos e Éticos",
+      desc: "Legislação, regulamentação e responsabilidade profissional",
+      duration: "30h",
+      topics: [
+        "Legislação Brasileira Atual",
+        "Ética na Prescrição",
+        "Documentação Necessária",
+        "Direito Veterinário"
+      ]
+    },
+    {
+      title: "Biotecnologia e Inovação",
+      desc: "Avanços tecnológicos e futuro da área",
+      duration: "40h",
+      topics: [
+        "Novas Tecnologias de Extração",
+        "Nanoencapsulamento",
+        "Futuro da Terapia Canabinoide",
+        "Medicina de Precisão"
+      ]
+    },
+    {
+      title: "Desenvolvimento Profissional",
+      desc: "Comunicação, marketing e responsabilidade social",
+      duration: "30h",
+      topics: [
+        "Posicionamento de Mercado",
+        "Comunicação com Tutores",
+        "Marketing Ético",
+        "Carreira na Endocanabinologia"
+      ]
+    }
   ];
 
   return (
     <section className="py-24 bg-background">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-          <div>
-            <span className="text-primary font-bold tracking-wider uppercase text-sm">Cronograma</span>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold mt-2">O que você vai aprender</h2>
+        <div className="text-center mb-12">
+          <span className="text-primary font-bold tracking-wider uppercase text-sm">Conteúdo Programático</span>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold mt-2">
+            Grade Curricular <br/> <span className="text-primary">Completa e Atualizada</span>
+          </h2>
+          
+          <div className="flex justify-center gap-8 md:gap-16 mt-8 py-6 border-y border-border max-w-2xl mx-auto">
+            <div className="text-center">
+              <p className="text-2xl font-bold text-primary">7</p>
+              <p className="text-xs text-muted-foreground uppercase font-bold tracking-tighter">Módulos</p>
+            </div>
+            <div className="w-px h-10 bg-border"></div>
+            <div className="text-center">
+              <p className="text-2xl font-bold text-primary">300h</p>
+              <p className="text-xs text-muted-foreground uppercase font-bold tracking-tighter">Carga Horária</p>
+            </div>
+            <div className="w-px h-10 bg-border"></div>
+            <div className="text-center">
+              <p className="text-2xl font-bold text-primary">12</p>
+              <p className="text-xs text-muted-foreground uppercase font-bold tracking-tighter">Meses</p>
+            </div>
           </div>
-          <button className="px-6 py-3 bg-white border border-primary text-primary font-bold rounded-full hover:bg-primary/5 transition-colors">
-            Ver grade completa
-          </button>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="max-w-4xl mx-auto space-y-4">
           {modules.map((mod, i) => (
-            <div key={i} className="flex items-start p-4 bg-white rounded-lg border border-border shadow-sm">
-              <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-sm mr-3">
-                {i + 1}
-              </span>
-              <span className="font-medium text-foreground">{mod}</span>
+            <div 
+              key={i} 
+              className={`group bg-white rounded-xl border transition-all duration-300 ${openModule === i ? 'border-primary ring-1 ring-primary/20 shadow-lg' : 'border-border hover:border-primary/50 shadow-sm'}`}
+            >
+              <button 
+                onClick={() => setOpenModule(openModule === i ? null : i)}
+                className="w-full flex items-center justify-between p-6 text-left"
+              >
+                <div className="flex items-start gap-6">
+                  <span className="text-2xl font-bold text-accent/40 font-heading">
+                    {(i + 1).toString().padStart(2, '0')}
+                  </span>
+                  <div>
+                    <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">{mod.title}</h3>
+                    <p className="text-sm text-muted-foreground mt-1">{mod.desc}</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-1.5 text-xs text-muted-foreground bg-muted/50 px-2 py-1 rounded">
+                    <Clock className="w-3.5 h-3.5" />
+                    {mod.duration}
+                  </div>
+                  <ChevronDown className={`w-5 h-5 text-muted-foreground transition-transform duration-300 ${openModule === i ? 'rotate-180 text-primary' : ''}`} />
+                </div>
+              </button>
+              
+              <AnimatePresence>
+                {openModule === i && (
+                  <motion.div 
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="overflow-hidden"
+                  >
+                    <div className="px-16 pb-8">
+                      <div className="h-px bg-border mb-6"></div>
+                      <div className="grid md:grid-cols-2 gap-x-12 gap-y-3">
+                        {mod.topics.map((topic, j) => (
+                          <div key={j} className="flex items-center gap-3">
+                            <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                            <span className="text-sm text-muted-foreground">{topic}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           ))}
+        </div>
+        
+        <div className="mt-12 text-center">
+           <button className="px-8 py-4 bg-primary text-white font-bold rounded-full hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
+             Quero o conteúdo completo em PDF
+           </button>
         </div>
       </div>
     </section>
@@ -245,7 +385,6 @@ export function TimelineSection() {
       <div className="container mx-auto px-4 md:px-6">
         <h2 className="text-3xl font-heading font-bold text-center mb-16">Como funciona sua jornada</h2>
         <div className="relative">
-          {/* Line */}
           <div className="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gray-200 -translate-y-1/2 z-0"></div>
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
@@ -276,7 +415,6 @@ export function PartnersSection() {
       <div className="container mx-auto px-4 md:px-6 text-center">
         <p className="text-sm font-bold text-muted-foreground uppercase tracking-widest mb-8">Certificação e Parceria</p>
         <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-80 grayscale hover:grayscale-0 transition-all duration-500">
-           {/* Placeholder for logos - styled as text for now */}
            <div className="text-2xl font-heading font-black text-primary flex items-center gap-2">
              <Leaf className="w-8 h-8" />
              Plantando Conhecimento
