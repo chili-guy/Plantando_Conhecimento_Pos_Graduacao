@@ -109,7 +109,7 @@ export function SolutionSection() {
             <motion.div 
               key={i}
               variants={fadeIn}
-              className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-border/50"
+              className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-border/50 text-center flex flex-col items-center"
             >
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
                 <card.icon className="w-6 h-6 text-primary" />
@@ -191,7 +191,7 @@ export function UniqueSection() {
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((f, i) => (
-            <div key={i} className="group p-6 rounded-2xl bg-muted/20 border border-transparent hover:border-primary/20 hover:bg-white hover:shadow-xl transition-all duration-300">
+            <div key={i} className="group p-6 rounded-2xl bg-muted/20 border border-transparent hover:border-primary/20 hover:bg-white hover:shadow-xl transition-all duration-300 text-center flex flex-col items-center">
               <Award className="w-10 h-10 text-primary mb-4 group-hover:scale-110 transition-transform" />
               <h3 className="text-xl font-bold mb-2">{f.title}</h3>
               <p className="text-muted-foreground">{f.desc}</p>
