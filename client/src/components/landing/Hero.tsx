@@ -7,7 +7,7 @@ export function Hero() {
       {/* Background Image - Using the provided image directly */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="/attached_assets/image_1767655170020.png" 
+          src="/hero-image.png" 
           alt="Veterinária e Animais" 
           className="w-full h-full object-cover object-center md:object-right"
         />
