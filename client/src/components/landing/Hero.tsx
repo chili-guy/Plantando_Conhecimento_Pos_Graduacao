@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Play } from "lucide-react";
-import heroImage from "@assets/generated_images/modern_veterinary_clinic_with_scientific_overlay.png";
+import { ArrowRight } from "lucide-react";
+import heroImage from "@assets/generated_images/modern_academic_medical_office_entrance.png";
 
 export function Hero() {
   return (
@@ -9,7 +9,7 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         <img 
           src={heroImage} 
-          alt="Clínica Veterinária do Futuro" 
+          alt="Academia de Medicina Moderna" 
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/80 to-transparent"></div>
@@ -46,24 +46,9 @@ export function Hero() {
               Quero fazer parte da nova era
               <ArrowRight className="w-5 h-5" />
             </button>
-            <button className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-medium text-lg px-8 py-4 rounded-full backdrop-blur-sm transition-all">
-              <Play className="w-5 h-5 fill-current" />
-              Assista o vídeo
-            </button>
           </div>
         </motion.div>
       </div>
-
-      {/* Scroll Indicator */}
-      <motion.div 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/50"
-      >
-        <span className="text-xs uppercase tracking-widest">Descubra</span>
-        <div className="w-px h-12 bg-gradient-to-b from-white/50 to-transparent"></div>
-      </motion.div>
     </section>
   );
 }
