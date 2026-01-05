@@ -1,0 +1,247 @@
+🔹 CONTEXTO GERAL
+
+Crie uma Landing Page premium, moderna e altamente visual para a 1ª Pós-graduação em Endocanabinologia Veterinária do mundo, voltada para médicos veterinários que buscam diferenciação profissional, inovação científica e autoridade clínica.
+
+A página deve transmitir:
+
+Inovação
+
+Credibilidade científica
+
+Exclusividade
+
+Futuro da medicina veterinária
+
+Transformação de carreira
+
+Evitar aparência de site “educacional tradicional”.
+Visual deve lembrar healthtech + educação premium + ciência avançada.
+
+🎨 DIREÇÃO VISUAL (MUITO IMPORTANTE)
+Estilo:
+
+Clean, sofisticado, tecnológico
+
+Minimalismo elegante
+
+Sensação de “nova era da veterinária”
+
+Paleta de cores:
+
+Verde profundo (ciência, natureza, cannabis medicinal)
+
+Tons neutros: branco, off-white, cinza claro
+
+Destaques em dourado suave ou verde neon discreto
+
+Tipografia:
+
+Fonte principal moderna (ex: Inter, Poppins, Montserrat)
+
+Títulos grandes e impactantes
+
+Bastante espaçamento (respiro visual)
+
+Elementos visuais:
+
+Imagens de:
+
+Médicos veterinários em clínica moderna
+
+Animais (cães e gatos) com aparência saudável
+
+Elementos científicos (moléculas, sistema endocanabinoide, biotecnologia)
+
+Ícones minimalistas
+
+Cards com sombra suave
+
+Animações leves (scroll, fade, hover)
+
+🧠 ESTRUTURA DA LANDING PAGE (SEÇÃO POR SEÇÃO)
+1️⃣ HERO SECTION (Impacto imediato)
+
+Headline grande e forte:
+
+A nova era da medicina veterinária já começou.
+
+Subheadline:
+
+Conheça a 1ª Pós-graduação em Endocanabinologia Veterinária do mundo e esteja entre os profissionais que lideram o futuro da prática clínica.
+
+Elementos visuais:
+
+Fundo com imagem ou vídeo sutil de clínica veterinária moderna
+
+Overlay com efeito científico (linhas, partículas, moléculas)
+
+CTA primário (botão destacado):
+👉 Quero fazer parte da nova era
+
+2️⃣ SEÇÃO “O PROBLEMA”
+
+Título:
+
+A medicina veterinária mudou — e sua formação acompanhou essa evolução?
+
+Texto curto e direto:
+
+Tutores mais exigentes
+
+Casos clínicos complexos
+
+Necessidade de terapias seguras, naturais e baseadas em ciência
+
+Falta de formação aprofundada em Endocanabinologia
+
+Layout:
+
+Texto à esquerda
+
+Imagem forte à direita
+
+3️⃣ SEÇÃO “A SOLUÇÃO”
+
+Título:
+
+Uma especialização criada para quem quer ir além do óbvio
+
+Cards com ícones:
+
+Ciência aplicada
+
+Prática clínica real
+
+Segurança jurídica
+
+Abordagem integrativa
+
+4️⃣ SEÇÃO “O QUE É ENDOCANABINOLOGIA”
+
+Layout visual + didático (infográfico):
+
+O que é o Sistema Endocanabinoide
+
+Por que ele é essencial na saúde animal
+
+Onde a Cannabis medicinal entra de forma ética e segura
+
+Visual:
+
+Gráfico/ilustração científica estilizada
+
+5️⃣ SEÇÃO “POR QUE ESSA PÓS É ÚNICA NO MUNDO”
+
+Cards premium:
+
+Primeira pós do mundo na área
+
+Certificação reconhecida pelo MEC
+
+Parceria com universidade tradicional
+
+Mentoria com especialistas
+
+Conteúdo atualizado e científico
+
+6️⃣ SEÇÃO “O QUE VOCÊ VAI APRENDER”
+
+Grid visual com módulos resumidos:
+
+Fundamentos da Endocanabinologia
+
+Aplicações clínicas em pets
+
+Casos reais
+
+Legislação e prescrição segura
+
+Biotecnologia e inovação
+
+Comunicação e posicionamento profissional
+
+Botão:
+👉 Quero ver o conteúdo completo
+
+7️⃣ SEÇÃO “COMO FUNCIONA”
+
+Timeline horizontal:
+
+Aulas online ao vivo
+
+Acesso às gravações
+
+Mentoria com experts
+
+Aplicação clínica
+
+Certificação reconhecida
+
+8️⃣ SEÇÃO “PARCERIA DE AUTORIDADE”
+
+Blocos lado a lado:
+
+Plantando Conhecimento (descrição curta)
+
+Universidade Anhanguera (credibilidade, MEC)
+
+Logos com destaque visual elegante.
+
+9️⃣ SEÇÃO “PROVAS SOCIAIS”
+
+Depoimentos em cards modernos:
+
+Foto
+
+Nome
+
+Profissão
+
+Frase curta e impactante
+
+🔟 SEÇÃO “INVESTIMENTO”
+
+Card premium:
+
+Valor: 12x R$ 987,00
+
+Selo de garantia 14 dias
+
+Texto de segurança e confiança
+
+CTA grande:
+👉 Garantir minha vaga agora
+
+1️⃣1️⃣ SEÇÃO “GARANTIA”
+
+Visual com selo:
+
+14 dias de garantia incondicional
+Seu risco é zero.
+
+1️⃣2️⃣ CTA FINAL (ENCERRAMENTO FORTE)
+
+Headline:
+
+Não seja apenas mais um prescritor.
+
+Subheadline:
+
+Torne-se um médico veterinário endocanabinologista e lidere o futuro da profissão.
+
+Botão final:
+👉 Quero entrar para a próxima turma
+
+🚀 OBJETIVO FINAL DA IA
+
+Gerar uma landing page:
+
+Extremamente visual
+
+Moderna
+
+Autoritária
+
+Emocionalmente envolvente
+
+Focada em conversão
