@@ -69,7 +69,7 @@ export function ProblemSection() {
             <img 
               src="/cannabis-dog.png" 
               alt="Administração de cannabis medicinal em cão" 
-              className="rounded-xl shadow-2xl w-full object-contain aspect-[4/3] bg-gray-50"
+              className="rounded-xl shadow-2xl w-full h-auto object-cover"
             />
           </motion.div>
         </div>
