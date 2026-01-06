@@ -123,12 +123,14 @@ export function SolutionSection() {
   );
 }
 
+import infographicImage from "@assets/generated_images/premium_scientific_infographic_of_endocannabinoid_system_connectivity.png";
+
 export function WhatIsSection() {
   return (
     <section className="py-32 bg-[#062d2d] relative overflow-hidden">
       {/* Background Texture & Depth */}
       <div className="absolute inset-0 z-0 opacity-20">
-        <img src={scienceImage} alt="" className="w-full h-full object-cover mix-blend-overlay" />
+        <img src={infographicImage} alt="" className="w-full h-full object-cover mix-blend-overlay" />
       </div>
       <div className="absolute inset-0 bg-gradient-to-b from-[#062d2d] via-transparent to-[#062d2d] z-10"></div>
       
@@ -184,8 +186,8 @@ export function WhatIsSection() {
             >
               <div className="relative z-10 border border-brand-gold/20 p-4 bg-brand-green/50 backdrop-blur-sm">
                 <img 
-                  src={scienceImage} 
-                  alt="Sistema Endocanabinoide Ilustração" 
+                  src={infographicImage} 
+                  alt="Sistema Endocanabinoide Infográfico" 
                   className="w-full h-auto grayscale group-hover:grayscale-0 transition-all duration-1000"
                 />
                 {/* Accent lines */}
@@ -195,7 +197,7 @@ export function WhatIsSection() {
               
               {/* Floating label */}
               <div className="absolute -bottom-8 -right-8 bg-brand-gold text-brand-green px-6 py-4 text-[10px] font-bold uppercase tracking-[0.2em] shadow-2xl z-20">
-                Ciência de Vanguarda
+                Conectividade Biológica
               </div>
             </motion.div>
 
