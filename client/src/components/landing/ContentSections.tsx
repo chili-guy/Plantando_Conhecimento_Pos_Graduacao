@@ -184,8 +184,8 @@ export function WhatIsSection() {
             >
               <div className="relative z-10 border border-brand-gold/20 p-4 bg-brand-green/50 backdrop-blur-sm">
                 <img 
-                  src="https://images.unsplash.com/photo-1530210124550-912dc1381cb8?auto=format&fit=crop&q=80&w=800" 
-                  alt="Receptores Moleculares e Bioquímica" 
+                  src={scienceImage} 
+                  alt="Sistema Endocanabinoide Ilustração" 
                   className="w-full h-auto grayscale group-hover:grayscale-0 transition-all duration-1000"
                 />
                 {/* Accent lines */}
