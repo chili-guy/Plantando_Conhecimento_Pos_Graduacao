@@ -6,23 +6,8 @@ import {
   Clock, ShieldCheck 
 } from "lucide-react";
 import problemImage from "@assets/generated_images/veterinarian_examining_a_dog_in_modern_clinic.png";
+import infographicImage from "@assets/generated_images/premium_scientific_infographic_of_endocannabinoid_system_connectivity.png";
 import scienceImage from "@assets/generated_images/abstract_endocannabinoid_system_illustration.png";
-
-// Animation variants
-const fadeIn = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
-};
-
-const staggerContainer = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1
-    }
-  }
-};
 
 export function ProblemSection() {
   return (
@@ -33,7 +18,10 @@ export function ProblemSection() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            variants={fadeIn}
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+            }}
             className="space-y-6"
           >
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">
@@ -62,7 +50,10 @@ export function ProblemSection() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            variants={fadeIn}
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+            }}
             className="relative"
           >
             <div className="absolute -inset-4 bg-primary/10 rounded-2xl -z-10 blur-xl"></div>
@@ -98,16 +89,27 @@ export function SolutionSection() {
         </div>
 
         <motion.div 
-          variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.1
+              }
+            }
+          }}
           className="grid md:grid-cols-2 lg:grid-cols-4 gap-12"
         >
           {cards.map((card, i) => (
             <motion.div 
               key={i}
-              variants={fadeIn}
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+              }}
               className="bg-brand-ivory p-12 shadow-[0_4px_30px_rgba(0,0,0,0.02)] border border-brand-gold/10 text-center flex flex-col items-center group"
             >
               <div className="w-16 h-16 bg-brand-gold/5 rounded-full flex items-center justify-center mb-10 group-hover:bg-brand-gold group-hover:text-white transition-all duration-700">
@@ -118,92 +120,6 @@ export function SolutionSection() {
             </motion.div>
           ))}
         </motion.div>
-      </div>
-    </section>
-  );
-}
-
-import infographicImage from "@assets/generated_images/premium_scientific_infographic_of_endocannabinoid_system_connectivity.png";
-import scienceImage from "@assets/generated_images/abstract_endocannabinoid_system_illustration.png";
-
-export function WhatIsSection() {
-  return (
-    <section className="py-32 bg-[#062d2d] relative overflow-hidden">
-      {/* Background Texture & Depth - Using the old scienceImage as requested */}
-      <div className="absolute inset-0 z-0 opacity-20">
-        <img src={scienceImage} alt="" className="w-full h-full object-cover mix-blend-overlay" />
-      </div>
-      <div className="absolute inset-0 bg-gradient-to-b from-[#062d2d] via-transparent to-[#062d2d] z-10"></div>
-      
-      <div className="container mx-auto px-4 md:px-6 relative z-20">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-12 gap-12 items-center">
-            
-            {/* Left Content */}
-            <motion.div 
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="lg:col-span-7 space-y-10"
-            >
-              <div>
-                <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-6 block">Conhecimento Fundamental</span>
-                <h2 className="text-4xl md:text-6xl font-heading font-medium text-white leading-tight">
-                  O Maestro <br/> <span className="text-brand-gold italic font-light">da Homeostase Animal</span>
-                </h2>
-              </div>
-
-              <p className="text-white/70 text-lg md:text-xl leading-relaxed font-light max-w-2xl border-l-2 border-brand-gold/30 pl-8">
-                O Sistema Endocanabinoide é o principal sistema regulador do organismo. 
-                Ele atua como um maestro, garantindo que todos os outros sistemas trabalhem em perfeita harmonia.
-              </p>
-
-              <div className="grid md:grid-cols-2 gap-6">
-                {[
-                  { 
-                    title: "Equilíbrio Sistêmico", 
-                    desc: "Regula dor, inflamação, humor e apetite em todos os vertebrados." 
-                  },
-                  { 
-                    title: "Medicina de Precisão", 
-                    desc: "Permite intervenções terapêuticas direcionadas e altamente eficazes." 
-                  }
-                ].map((item, i) => (
-                  <div key={i} className="group p-8 bg-white/5 border border-white/10 hover:border-brand-gold/50 transition-all duration-500">
-                    <div className="w-8 h-[1px] bg-brand-gold mb-6 group-hover:w-full transition-all duration-700"></div>
-                    <h4 className="text-brand-gold font-bold text-xs uppercase tracking-widest mb-3">{item.title}</h4>
-                    <p className="text-white/40 text-sm font-light leading-relaxed">{item.desc}</p>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-
-            {/* Right Visual Element */}
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              className="lg:col-span-5 relative group"
-            >
-              <div className="relative z-10 border border-brand-gold/20 p-4 bg-brand-green/50 backdrop-blur-sm">
-                <img 
-                  src={infographicImage} 
-                  alt="Sistema Endocanabinoide Infográfico" 
-                  className="w-full h-auto grayscale group-hover:grayscale-0 transition-all duration-1000"
-                />
-                {/* Accent lines */}
-                <div className="absolute -top-4 -right-4 w-24 h-24 border-t-2 border-r-2 border-brand-gold/40"></div>
-                <div className="absolute -bottom-4 -left-4 w-24 h-24 border-b-2 border-l-2 border-brand-gold/40"></div>
-              </div>
-              
-              {/* Floating label */}
-              <div className="absolute -bottom-8 -right-8 bg-brand-gold text-brand-green px-6 py-4 text-[10px] font-bold uppercase tracking-[0.2em] shadow-2xl z-20">
-                Conectividade Biológica
-              </div>
-            </motion.div>
-
-          </div>
-        </div>
       </div>
     </section>
   );
