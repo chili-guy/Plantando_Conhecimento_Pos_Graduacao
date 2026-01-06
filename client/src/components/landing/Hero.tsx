@@ -51,9 +51,9 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-8 w-full justify-center"
           >
-            <button className="bg-brand-gold hover:bg-[#a68a4d] text-brand-ivory font-bold text-sm px-20 py-7 transition-all shadow-xl hover:-translate-y-1 tracking-[0.25em] uppercase border border-brand-gold/20">
+            <button className="bg-brand-gold hover:bg-[#a68a4d] text-brand-ivory font-bold text-xs sm:text-sm px-6 sm:px-12 md:px-20 py-5 sm:py-6 md:py-7 transition-all shadow-xl hover:-translate-y-1 tracking-[0.1em] sm:tracking-[0.2em] md:tracking-[0.25em] uppercase border border-brand-gold/20">
               SOLICITAR MATRÍCULA
-              <ArrowRight className="inline-block ml-6 w-5 h-5 transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="inline-block ml-3 sm:ml-4 md:ml-6 w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1" />
             </button>
           </motion.div>
         </div>

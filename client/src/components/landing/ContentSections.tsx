@@ -330,7 +330,7 @@ export function ModulesSection() {
           {modules.map((mod, i) => (
             <div 
               key={i} 
-              className={`group bg-white rounded-xl border transition-all duration-300 ${openModule === i ? 'border-primary ring-1 ring-primary/20 shadow-lg' : 'border-border hover:border-primary/50 shadow-sm'}`}
+              className={`group bg-white rounded-xl border transition-[border-color,box-shadow] duration-150 ${openModule === i ? 'border-primary ring-1 ring-primary/20 shadow-lg' : 'border-border hover:border-primary/50 shadow-sm'}`}
             >
               <button 
                 onClick={() => setOpenModule(openModule === i ? null : i)}
@@ -341,7 +341,7 @@ export function ModulesSection() {
                     {(i + 1).toString().padStart(2, '0')}
                   </span>
                   <div>
-                    <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">{mod.title}</h3>
+                    <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-150">{mod.title}</h3>
                     <p className="text-sm text-muted-foreground mt-1">{mod.desc}</p>
                   </div>
                 </div>
@@ -350,17 +350,21 @@ export function ModulesSection() {
                     <Clock className="w-3.5 h-3.5" />
                     {mod.duration}
                   </div>
-                  <ChevronDown className={`w-5 h-5 text-muted-foreground transition-transform duration-300 ${openModule === i ? 'rotate-180 text-primary' : ''}`} />
+                  <ChevronDown className={`w-5 h-5 text-muted-foreground transition-transform duration-150 ${openModule === i ? 'rotate-180 text-primary' : ''}`} />
                 </div>
               </button>
               
-              <AnimatePresence>
+              <AnimatePresence mode="wait">
                 {openModule === i && (
                   <motion.div 
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3 }}
+                    transition={{ 
+                      duration: 0.15,
+                      ease: [0.4, 0, 0.2, 1]
+                    }}
+                    style={{ willChange: 'height, opacity' }}
                     className="overflow-hidden"
                   >
                     <div className="px-16 pb-8">
