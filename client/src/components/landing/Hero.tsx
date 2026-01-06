@@ -15,9 +15,6 @@ export function Hero() {
           backgroundSize: '200px 200px'
         }}></div>
       </div>
-      {/* CBD Molecules */}
-      <FloatingBubbles count={8} color="rgba(248, 156, 34, 0.08)" />
-      
       {/* Refined Background */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#F89C22]/10 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/4"></div>
