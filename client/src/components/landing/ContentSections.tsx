@@ -10,6 +10,13 @@ import scienceImage from "@assets/generated_images/abstract_endocannabinoid_syst
 export function ProblemSection() {
   return (
     <section className="py-24 bg-gradient-to-b from-[#032832] to-[#044F5F] text-white relative overflow-hidden">
+      {/* Textured Background */}
+      <div className="absolute inset-0 z-0 opacity-20">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='dots' width='60' height='60' patternUnits='userSpaceOnUse'%3E%3Ccircle cx='30' cy='30' r='1' fill='%23ffffff' opacity='0.15'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23dots)'/%3E%3C/svg%3E")`,
+          backgroundSize: '60px 60px'
+        }}></div>
+      </div>
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#F89C22]/20 rounded-full blur-[80px]"></div>
       </div>
@@ -37,8 +44,8 @@ export function ProblemSection() {
                 ))}
               </ul>
             </div>
-            <div className="pt-6">
-              <button className="bg-gradient-to-r from-[#E75C23] to-[#F89C22] hover:from-[#F89C22] hover:to-[#E75C23] text-white font-bold px-8 py-4 rounded-lg transition-all duration-200 shadow-lg flex items-center gap-2">
+            <div className="pt-6 flex justify-center md:justify-start">
+              <button className="bg-gradient-to-r from-[#E75C23] to-[#F89C22] hover:from-[#F89C22] hover:to-[#E75C23] text-white font-bold px-8 py-4 rounded-lg transition-all duration-200 shadow-lg flex items-center gap-2 mx-auto md:mx-0">
                 Quero me especializar agora
                 <ArrowRight className="w-5 h-5" />
               </button>
@@ -67,8 +74,15 @@ export function SolutionSection() {
   ];
 
   return (
-    <section className="py-32 bg-gradient-to-b from-white to-[#f8f9fa]">
-      <div className="container mx-auto px-4 md:px-6">
+    <section className="py-32 bg-gradient-to-b from-white to-[#f8f9fa] relative overflow-hidden">
+      {/* Textured Background */}
+      <div className="absolute inset-0 z-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='grid' width='40' height='40' patternUnits='userSpaceOnUse'%3E%3Cpath d='M 40 0 L 0 0 0 40' fill='none' stroke='%23032832' stroke-width='0.5' opacity='0.3'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grid)'/%3E%3C/svg%3E")`,
+          backgroundSize: '40px 40px'
+        }}></div>
+      </div>
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center mb-24 max-w-3xl mx-auto">
           <span className="text-[#E75C23] text-xs font-bold tracking-[0.4em] uppercase mb-4 block">Propósito</span>
           <h2 className="text-4xl md:text-5xl font-heading font-medium mb-6 uppercase tracking-tight text-[#032832]">
@@ -91,8 +105,8 @@ export function SolutionSection() {
             </div>
           ))}
         </div>
-        <div className="text-center mt-16">
-          <button className="bg-gradient-to-r from-[#E75C23] to-[#F89C22] hover:from-[#F89C22] hover:to-[#E75C23] text-white font-bold px-10 py-5 rounded-lg transition-all duration-200 shadow-xl flex items-center gap-2 mx-auto">
+        <div className="text-center mt-16 flex justify-center">
+          <button className="bg-gradient-to-r from-[#E75C23] to-[#F89C22] hover:from-[#F89C22] hover:to-[#E75C23] text-white font-bold px-8 sm:px-10 py-4 sm:py-5 rounded-lg transition-all duration-200 shadow-xl flex items-center gap-2 mx-auto">
             Ver todos os diferenciais
             <ArrowRight className="w-5 h-5" />
           </button>
@@ -147,8 +161,8 @@ export function WhatIsSection() {
                   </div>
                 ))}
               </div>
-              <div className="text-center mt-12">
-                <button className="bg-gradient-to-r from-[#E75C23] to-[#F89C22] hover:from-[#F89C22] hover:to-[#E75C23] text-white font-bold px-10 py-5 rounded-lg transition-all duration-200 shadow-xl flex items-center gap-2 mx-auto">
+              <div className="text-center mt-12 flex justify-center">
+                <button className="bg-gradient-to-r from-[#E75C23] to-[#F89C22] hover:from-[#F89C22] hover:to-[#E75C23] text-white font-bold px-8 sm:px-10 py-4 sm:py-5 rounded-lg transition-all duration-200 shadow-xl flex items-center gap-2 mx-auto">
                   Entender melhor o sistema
                   <ArrowRight className="w-5 h-5" />
                 </button>
@@ -170,8 +184,15 @@ export function UniqueSection() {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-b from-[#f8f9fa] to-white">
-      <div className="container mx-auto px-4 md:px-6">
+    <section className="py-24 bg-gradient-to-b from-[#f8f9fa] to-white relative overflow-hidden">
+      {/* Textured Background */}
+      <div className="absolute inset-0 z-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='grid2' width='40' height='40' patternUnits='userSpaceOnUse'%3E%3Cpath d='M 40 0 L 0 0 0 40' fill='none' stroke='%23032832' stroke-width='0.5' opacity='0.3'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grid2)'/%3E%3C/svg%3E")`,
+          backgroundSize: '40px 40px'
+        }}></div>
+      </div>
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-[#032832]">
             Por que esta pós-graduação é <span className="text-[#E75C23]">única no mundo?</span>
@@ -188,8 +209,8 @@ export function UniqueSection() {
             </div>
           ))}
         </div>
-        <div className="text-center mt-16">
-          <button className="bg-gradient-to-r from-[#E75C23] to-[#F89C22] hover:from-[#F89C22] hover:to-[#E75C23] text-white font-bold px-10 py-5 rounded-lg transition-all duration-200 shadow-xl flex items-center gap-2 mx-auto">
+        <div className="text-center mt-16 flex justify-center">
+          <button className="bg-gradient-to-r from-[#E75C23] to-[#F89C22] hover:from-[#F89C22] hover:to-[#E75C23] text-white font-bold px-8 sm:px-10 py-4 sm:py-5 rounded-lg transition-all duration-200 shadow-xl flex items-center gap-2 mx-auto">
             Ver todas as vantagens
             <ArrowRight className="w-5 h-5" />
           </button>
@@ -369,8 +390,8 @@ export function ModulesSection() {
           ))}
         </div>
         
-        <div className="mt-12 text-center">
-           <button className="px-10 py-5 bg-gradient-to-r from-[#E75C23] to-[#F89C22] hover:from-[#F89C22] hover:to-[#E75C23] text-white font-bold rounded-lg transition-all duration-200 shadow-xl flex items-center gap-2 mx-auto">
+        <div className="mt-12 text-center flex justify-center">
+           <button className="px-8 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-[#E75C23] to-[#F89C22] hover:from-[#F89C22] hover:to-[#E75C23] text-white font-bold rounded-lg transition-all duration-200 shadow-xl flex items-center gap-2 mx-auto">
              Quero o conteúdo completo em PDF
              <ArrowRight className="w-5 h-5" />
            </button>
@@ -383,6 +404,13 @@ export function ModulesSection() {
 export function TimelineSection() {
   return (
     <section className="py-24 bg-gradient-to-b from-[#044F5F] to-[#032832] text-white relative overflow-hidden">
+      {/* Textured Background */}
+      <div className="absolute inset-0 z-0 opacity-20">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='dots2' width='60' height='60' patternUnits='userSpaceOnUse'%3E%3Ccircle cx='30' cy='30' r='1' fill='%23ffffff' opacity='0.15'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23dots2)'/%3E%3C/svg%3E")`,
+          backgroundSize: '60px 60px'
+        }}></div>
+      </div>
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-[#F89C22]/20 rounded-full blur-[80px]"></div>
       </div>
@@ -405,8 +433,8 @@ export function TimelineSection() {
             </div>
           ))}
         </div>
-        <div className="text-center mt-16">
-          <button className="bg-gradient-to-r from-[#E75C23] to-[#F89C22] hover:from-[#F89C22] hover:to-[#E75C23] text-white font-bold px-10 py-5 rounded-lg transition-all duration-200 shadow-xl flex items-center gap-2 mx-auto">
+        <div className="text-center mt-16 flex justify-center">
+          <button className="bg-gradient-to-r from-[#E75C23] to-[#F89C22] hover:from-[#F89C22] hover:to-[#E75C23] text-white font-bold px-8 sm:px-10 py-4 sm:py-5 rounded-lg transition-all duration-200 shadow-xl flex items-center gap-2 mx-auto">
             Iniciar minha jornada agora
             <ArrowRight className="w-5 h-5" />
           </button>
@@ -469,8 +497,15 @@ export function Footer() {
 
 export function TestimonialsSection() {
   return (
-    <section className="py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
-      <div className="container mx-auto px-4 md:px-6">
+    <section className="py-24 bg-gradient-to-b from-white to-[#f8f9fa] relative overflow-hidden">
+      {/* Textured Background */}
+      <div className="absolute inset-0 z-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='grid3' width='40' height='40' patternUnits='userSpaceOnUse'%3E%3Cpath d='M 40 0 L 0 0 0 40' fill='none' stroke='%23032832' stroke-width='0.5' opacity='0.3'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grid3)'/%3E%3C/svg%3E")`,
+          backgroundSize: '40px 40px'
+        }}></div>
+      </div>
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <h2 className="text-3xl font-heading font-bold text-center mb-16 text-[#032832]">Quem já está transformando a carreira</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
           {[1, 2, 3].map((i) => (
@@ -490,8 +525,8 @@ export function TestimonialsSection() {
             </div>
           ))}
         </div>
-        <div className="text-center mt-16">
-          <button className="bg-gradient-to-r from-[#E75C23] to-[#F89C22] hover:from-[#F89C22] hover:to-[#E75C23] text-white font-bold px-10 py-5 rounded-lg transition-all duration-200 shadow-xl flex items-center gap-2 mx-auto">
+        <div className="text-center mt-16 flex justify-center">
+          <button className="bg-gradient-to-r from-[#E75C23] to-[#F89C22] hover:from-[#F89C22] hover:to-[#E75C23] text-white font-bold px-8 sm:px-10 py-4 sm:py-5 rounded-lg transition-all duration-200 shadow-xl flex items-center gap-2 mx-auto">
             Quero fazer parte deste time
             <ArrowRight className="w-5 h-5" />
           </button>
