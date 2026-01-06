@@ -104,12 +104,12 @@ export function SolutionSection() {
 
 export function WhatIsSection() {
   return (
-    <section className="py-32 bg-[#062d2d] relative overflow-hidden">
+    <section className="py-32 bg-gradient-to-b from-[#032832] to-[#044F5F] relative overflow-hidden">
       {/* Background Texture & Depth - Restoration of the previous background */}
       <div className="absolute inset-0 z-0 opacity-20">
         <img src={scienceImage} alt="" className="w-full h-full object-cover mix-blend-overlay" />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-b from-[#062d2d] via-transparent to-[#062d2d] z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-[#032832]/80 via-transparent to-[#044F5F]/80 z-10"></div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-20">
         <div className="max-w-6xl mx-auto">
@@ -118,13 +118,13 @@ export function WhatIsSection() {
             {/* Left Content */}
             <div className="max-w-3xl space-y-10">
               <div>
-                <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-6 block">Conhecimento Fundamental</span>
+                <span className="text-[#F89C22] text-[10px] font-bold uppercase tracking-[0.5em] mb-6 block">Conhecimento Fundamental</span>
                 <h2 className="text-4xl md:text-6xl font-heading font-medium text-white leading-tight">
-                  O Maestro <br/> <span className="text-brand-gold italic font-light">da Homeostase Animal</span>
+                  O Maestro <br/> <span className="text-[#F89C22] italic font-light">da Homeostase Animal</span>
                 </h2>
               </div>
 
-              <p className="text-white/70 text-lg md:text-xl leading-relaxed font-light max-w-2xl border-l-2 border-brand-gold/30 pl-8">
+              <p className="text-white/70 text-lg md:text-xl leading-relaxed font-light max-w-2xl border-l-2 border-[#F89C22]/30 pl-8">
                 O Sistema Endocanabinoide é o principal sistema regulador do organismo. 
                 Ele atua como um maestro, garantindo que todos os outros sistemas trabalhem em perfeita harmonia.
               </p>
@@ -147,12 +147,12 @@ export function WhatIsSection() {
                   </div>
                 ))}
               </div>
-            </div>
-            <div className="text-center mt-12">
-              <button className="bg-gradient-to-r from-[#E75C23] to-[#F89C22] hover:from-[#F89C22] hover:to-[#E75C23] text-white font-bold px-10 py-5 rounded-lg transition-all duration-200 shadow-xl flex items-center gap-2 mx-auto">
-                Entender melhor o sistema
-                <ArrowRight className="w-5 h-5" />
-              </button>
+              <div className="text-center mt-12">
+                <button className="bg-gradient-to-r from-[#E75C23] to-[#F89C22] hover:from-[#F89C22] hover:to-[#E75C23] text-white font-bold px-10 py-5 rounded-lg transition-all duration-200 shadow-xl flex items-center gap-2 mx-auto">
+                  Entender melhor o sistema
+                  <ArrowRight className="w-5 h-5" />
+                </button>
+              </div>
             </div>
           </div>
         </div>
