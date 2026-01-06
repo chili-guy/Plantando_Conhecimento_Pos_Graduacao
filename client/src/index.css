@@ -9,72 +9,55 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
   
-  /* High-Ticket Premium Brand Colors - Gold Focus */
-  --color-brand-green: hsl(165 40% 8%);      /* Deep backdrop */
-  --color-brand-light: hsl(45 15% 98%);      /* Sophisticated warm off-white */
-  --color-brand-gold: hsl(45 45% 50%);       /* Rich Gold as primary */
-  --color-brand-accent: hsl(45 45% 40%);     /* Darker gold for accents */
+  /* The "Celestial Emerald & Antique Gold" Palette */
+  --color-brand-green: hsl(165 40% 6%);      /* Midnight Emerald - Almost Black */
+  --color-brand-gold: hsl(42 45% 55%);       /* Antique Gold - Muted & Sophisticated */
+  --color-brand-gold-light: hsl(42 45% 70%); /* Luminous Gold for highlights */
+  --color-brand-ivory: hsl(40 20% 98%);      /* Elegant Ivory - Not pure white */
 
-  --color-background: var(--color-brand-light);
+  --color-background: var(--color-brand-ivory);
   --color-foreground: var(--color-brand-green);
 
-  --color-card: hsl(0 0% 100%);
-  --color-card-foreground: var(--color-brand-green);
-
-  --color-popover: hsl(0 0% 100%);
-  --color-popover-foreground: var(--color-brand-green);
-
-  --color-primary: var(--color-brand-gold);
-  --color-primary-foreground: var(--color-brand-light);
-
-  --color-secondary: var(--color-brand-green);
-  --color-secondary-foreground: var(--color-brand-light);
-
-  --color-muted: hsl(165 5% 94%);
-  --color-muted-foreground: hsl(165 10% 40%);
+  --color-primary: var(--color-brand-green);
+  --color-primary-foreground: var(--color-brand-gold);
 
   --color-accent: var(--color-brand-gold);
-  --color-accent-foreground: var(--color-brand-light);
+  --color-accent-foreground: var(--color-brand-green);
 
-  --color-destructive: hsl(0 50% 45%);
-  --color-destructive-foreground: hsl(0 0% 98%);
-
-  --color-border: hsl(165 10% 88%);
-  --color-input: hsl(165 10% 90%);
-  --color-ring: var(--color-brand-gold);
+  --color-border: hsl(42 20% 85%);
+  --color-muted: hsl(42 10% 92%);
+  --color-muted-foreground: hsl(165 10% 40%);
 
   --font-sans: 'Inter', sans-serif;
   --font-heading: 'Montserrat', sans-serif;
   
-  --radius: 0.25rem; /* Sharper corners for a more architectural/premium feel */
+  --radius: 0px; /* Sharp corners for maximum architectural prestige */
 }
 
 @layer base {
-  * {
-    @apply border-border/40;
-  }
   body {
-    @apply font-sans antialiased bg-background text-foreground selection:bg-brand-gold/20;
-    background-image: radial-gradient(circle at 50% 50%, rgba(212, 225, 55, 0.02) 0%, transparent 100%);
+    @apply font-sans antialiased bg-background text-foreground;
+    background-image: 
+      linear-gradient(to bottom, rgba(184, 155, 94, 0.03) 0%, transparent 100%),
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    background-blend-mode: overlay;
   }
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-heading font-semibold tracking-tight; /* Semibold is often more elegant than Bold */
-  }
 }
 
-/* Texture and Depth */
-.premium-shadow {
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.02);
+.text-gold {
+  color: var(--color-brand-gold);
 }
 
-.glass-panel {
-  @apply bg-white/40 backdrop-blur-md border border-white/20;
+.bg-premium-dark {
+  background-color: var(--color-brand-green);
 }
 
-.gold-gradient {
+.border-premium-gold {
+  border-color: rgba(184, 155, 94, 0.3);
+}
+
+.gold-gradient-bg {
   background: linear-gradient(135deg, #b89b5e 0%, #d4b475 50%, #b89b5e 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 /* Custom Animations */

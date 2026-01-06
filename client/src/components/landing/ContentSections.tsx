@@ -87,15 +87,14 @@ export function SolutionSection() {
   ];
 
   return (
-    <section className="py-24 bg-muted/30">
+    <section className="py-32 bg-white">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-16 max-w-2xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
-            Uma especialização criada para quem quer <span className="text-primary">ir além do óbvio</span>
+        <div className="text-center mb-24 max-w-3xl mx-auto">
+          <span className="text-brand-gold text-xs font-bold tracking-[0.4em] uppercase mb-4 block">Propósito</span>
+          <h2 className="text-4xl md:text-5xl font-heading font-medium mb-6 uppercase tracking-tight">
+            Uma especialização para <br/> <span className="text-brand-gold italic font-light">quem busca a elite</span>
           </h2>
-          <p className="text-muted-foreground text-lg">
-            O conhecimento que separa os veterinários comuns das referências de mercado.
-          </p>
+          <div className="w-20 h-[1px] bg-brand-gold/30 mx-auto"></div>
         </div>
 
         <motion.div 
@@ -103,19 +102,19 @@ export function SolutionSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid md:grid-cols-2 lg:grid-cols-4 gap-12"
         >
           {cards.map((card, i) => (
             <motion.div 
               key={i}
               variants={fadeIn}
-              className="bg-white p-10 rounded-none shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] transition-all duration-500 border border-border/20 text-center flex flex-col items-center group"
+              className="bg-brand-ivory p-12 shadow-[0_4px_30px_rgba(0,0,0,0.02)] border border-brand-gold/10 text-center flex flex-col items-center group"
             >
-              <div className="w-16 h-16 bg-brand-green/5 rounded-full flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
-                <card.icon className="w-6 h-6 text-brand-gold" strokeWidth={1.5} />
+              <div className="w-16 h-16 bg-brand-gold/5 rounded-full flex items-center justify-center mb-10 group-hover:bg-brand-gold group-hover:text-white transition-all duration-700">
+                <card.icon className="w-6 h-6 text-brand-gold group-hover:text-brand-ivory transition-colors" strokeWidth={1} />
               </div>
-              <h3 className="text-xl font-medium mb-4 tracking-tight uppercase">{card.title}</h3>
-              <p className="text-muted-foreground font-light leading-relaxed">{card.desc}</p>
+              <h3 className="text-lg font-medium mb-6 tracking-[0.1em] uppercase">{card.title}</h3>
+              <p className="text-muted-foreground font-light leading-relaxed text-sm">{card.desc}</p>
             </motion.div>
           ))}
         </motion.div>
