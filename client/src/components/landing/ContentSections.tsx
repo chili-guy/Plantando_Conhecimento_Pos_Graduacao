@@ -409,7 +409,7 @@ export function TimelineSection() {
 }
 
 import anhangueraLogo from "@assets/image_1767725302166.png";
-import plantandoLogo from "@assets/image_1767725634656.png";
+import plantandoLogo from "@assets/image-removebg-preview_1767725759434.png";
 
 export function PartnersSection() {
   return (
@@ -418,7 +418,7 @@ export function PartnersSection() {
         <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-12 block">Instituições Responsáveis</span>
         <div className="flex flex-col md:flex-row justify-center items-center gap-16 md:gap-32 opacity-80 grayscale hover:grayscale-0 transition-all duration-700">
            <div className="flex flex-col items-center gap-4">
-             <img src={plantandoLogo} alt="Plantando Conhecimento" className="h-20 w-auto object-contain mix-blend-multiply" />
+             <img src={plantandoLogo} alt="Plantando Conhecimento" className="h-20 w-auto object-contain" />
              <span className="text-[10px] text-brand-gold/60 uppercase tracking-widest">Realização</span>
            </div>
            <div className="hidden md:block w-px h-16 bg-brand-gold/10"></div>
@@ -440,7 +440,7 @@ export function Footer() {
           <div className="flex items-center gap-8 grayscale brightness-200 opacity-70">
             <img src={anhangueraLogo} alt="Anhanguera" className="h-10 w-auto" />
             <div className="w-[1px] h-6 bg-brand-gold/30"></div>
-            <img src={plantandoLogo} alt="Plantando Conhecimento" className="h-10 w-auto mix-blend-multiply" />
+            <img src={plantandoLogo} alt="Plantando Conhecimento" className="h-10 w-auto" />
           </div>
           
           <div className="flex gap-8 text-[10px] font-bold tracking-[0.2em] uppercase text-brand-gold/60">

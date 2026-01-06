@@ -3,7 +3,7 @@ import { ArrowRight, Microscope, ShieldCheck, Award, Users } from "lucide-react"
 import heroBg from "@assets/generated_images/minimalist_modern_medical_architecture_interior.png";
 
 import anhangueraLogo from "@assets/image_1767725302166.png";
-import plantandoLogo from "@assets/image_1767725634656.png";
+import plantandoLogo from "@assets/image-removebg-preview_1767725759434.png";
 
 export function Hero() {
   return (
@@ -21,7 +21,7 @@ export function Hero() {
         <div className="absolute top-8 left-1/2 -translate-x-1/2 flex items-center gap-12 opacity-80 grayscale hover:grayscale-0 transition-all duration-700">
           <img src={anhangueraLogo} alt="Anhanguera" className="h-10 md:h-12 w-auto object-contain" />
           <div className="w-[1px] h-8 bg-brand-gold/20"></div>
-          <img src={plantandoLogo} alt="Plantando Conhecimento" className="h-10 md:h-12 w-auto object-contain mix-blend-multiply" />
+          <img src={plantandoLogo} alt="Plantando Conhecimento" className="h-10 md:h-12 w-auto object-contain" />
         </div>
 
         <div className="flex flex-col items-center text-center max-w-5xl mx-auto mt-20">
