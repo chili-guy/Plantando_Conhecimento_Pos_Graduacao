@@ -11,8 +11,8 @@ import { FloatingBubbles } from "./FloatingBubbles";
 export function ProblemSection() {
   return (
     <section className="py-24 bg-gradient-to-b from-[#032832] to-[#044F5F] text-white relative overflow-hidden">
-      {/* Floating Bubbles */}
-      <FloatingBubbles count={12} color="rgba(248, 156, 34, 0.12)" />
+      {/* CBD Molecules */}
+      <FloatingBubbles count={6} color="rgba(248, 156, 34, 0.06)" />
       {/* Textured Background */}
       <div className="absolute inset-0 z-0 opacity-20">
         <div className="absolute inset-0" style={{
@@ -409,8 +409,8 @@ export function ModulesSection() {
 export function TimelineSection() {
   return (
     <section className="py-24 bg-gradient-to-b from-[#044F5F] to-[#032832] text-white relative overflow-hidden">
-      {/* Floating Bubbles */}
-      <FloatingBubbles count={12} color="rgba(248, 156, 34, 0.12)" />
+      {/* CBD Molecules */}
+      <FloatingBubbles count={6} color="rgba(248, 156, 34, 0.06)" />
       {/* Textured Background */}
       <div className="absolute inset-0 z-0 opacity-20">
         <div className="absolute inset-0" style={{
