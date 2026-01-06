@@ -34,7 +34,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="text-4xl md:text-6xl lg:text-8xl font-heading font-medium text-white leading-[1.05] mb-8 tracking-tighter"
           >
-            Lidere a <span className="italic font-light opacity-90">Nova Era</span> da <br className="hidden md:block" /> Medicina Veterinária
+            Lidere a <span className="italic font-light text-[#b89b5e]">Nova Era</span> da <br className="hidden md:block" /> Medicina Veterinária
           </motion.h1>
           
           <motion.p 

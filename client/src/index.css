@@ -9,11 +9,11 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
   
-  /* High-Ticket Premium Brand Colors */
-  --color-brand-green: hsl(165 40% 8%);      /* Deep, near-black emerald */
+  /* High-Ticket Premium Brand Colors - Gold Focus */
+  --color-brand-green: hsl(165 40% 8%);      /* Deep backdrop */
   --color-brand-light: hsl(45 15% 98%);      /* Sophisticated warm off-white */
-  --color-brand-gold: hsl(45 40% 55%);       /* Muted brass/gold */
-  --color-brand-accent: hsl(165 40% 15%);    /* Subtle emerald accent */
+  --color-brand-gold: hsl(45 45% 50%);       /* Rich Gold as primary */
+  --color-brand-accent: hsl(45 45% 40%);     /* Darker gold for accents */
 
   --color-background: var(--color-brand-light);
   --color-foreground: var(--color-brand-green);
@@ -24,11 +24,11 @@
   --color-popover: hsl(0 0% 100%);
   --color-popover-foreground: var(--color-brand-green);
 
-  --color-primary: var(--color-brand-green);
+  --color-primary: var(--color-brand-gold);
   --color-primary-foreground: var(--color-brand-light);
 
-  --color-secondary: hsl(165 10% 92%);
-  --color-secondary-foreground: var(--color-brand-green);
+  --color-secondary: var(--color-brand-green);
+  --color-secondary-foreground: var(--color-brand-light);
 
   --color-muted: hsl(165 5% 94%);
   --color-muted-foreground: hsl(165 10% 40%);
