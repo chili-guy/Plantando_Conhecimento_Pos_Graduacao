@@ -6,6 +6,7 @@ import {
   Clock, ShieldCheck 
 } from "lucide-react";
 import infographicImage from "@assets/image_1767727916521.png";
+import scienceImage from "@assets/generated_images/abstract_endocannabinoid_system_illustration.png";
 
 export function ProblemSection() {
   return (
@@ -126,6 +127,10 @@ export function SolutionSection() {
 export function WhatIsSection() {
   return (
     <section className="py-32 bg-[#062d2d] relative overflow-hidden">
+      {/* Background Texture & Depth - Restoration of the previous background */}
+      <div className="absolute inset-0 z-0 opacity-20">
+        <img src={scienceImage} alt="" className="w-full h-full object-cover mix-blend-overlay" />
+      </div>
       <div className="absolute inset-0 bg-gradient-to-b from-[#062d2d] via-transparent to-[#062d2d] z-10"></div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-20">
