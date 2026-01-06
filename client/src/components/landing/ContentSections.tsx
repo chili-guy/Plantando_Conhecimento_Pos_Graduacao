@@ -9,14 +9,17 @@ import scienceImage from "@assets/generated_images/abstract_endocannabinoid_syst
 
 export function ProblemSection() {
   return (
-    <section className="py-24 bg-white">
-      <div className="container mx-auto px-4 md:px-6">
+    <section className="py-24 bg-gradient-to-b from-[#032832] to-[#044F5F] text-white relative overflow-hidden">
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#F89C22]/20 rounded-full blur-[80px]"></div>
+      </div>
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">
-              A medicina veterinária mudou — <span className="text-primary">e sua formação acompanhou essa evolução?</span>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-white">
+              A medicina veterinária mudou — <span className="text-[#F89C22]">e sua formação acompanhou essa evolução?</span>
             </h2>
-            <div className="space-y-4 text-lg text-muted-foreground">
+            <div className="space-y-4 text-lg text-white/80">
               <p>
                 Tutores mais exigentes buscam terapias que vão além do convencional. 
                 Os casos clínicos tornam-se cada vez mais complexos e crônicos.
@@ -28,15 +31,21 @@ export function ProblemSection() {
                   "Falta de formação aprofundada em Endocanabinologia"
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-primary" />
-                    <span className="text-foreground font-medium">{item}</span>
+                    <CheckCircle2 className="w-5 h-5 text-[#F89C22]" />
+                    <span className="text-white font-medium">{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
+            <div className="pt-6">
+              <button className="bg-gradient-to-r from-[#E75C23] to-[#F89C22] hover:from-[#F89C22] hover:to-[#E75C23] text-white font-bold px-8 py-4 rounded-lg transition-all duration-200 shadow-lg flex items-center gap-2">
+                Quero me especializar agora
+                <ArrowRight className="w-5 h-5" />
+              </button>
+            </div>
           </div>
           <div className="relative">
-            <div className="absolute -inset-4 bg-primary/10 rounded-2xl -z-10 blur-md"></div>
+            <div className="absolute -inset-4 bg-[#F89C22]/20 rounded-2xl -z-10 blur-md"></div>
             <img 
               src="/cannabis-dog.png" 
               alt="Administração de cannabis medicinal em cão" 
@@ -58,29 +67,35 @@ export function SolutionSection() {
   ];
 
   return (
-    <section className="py-32 bg-white">
+    <section className="py-32 bg-gradient-to-b from-white to-[#f8f9fa]">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-24 max-w-3xl mx-auto">
-          <span className="text-brand-gold text-xs font-bold tracking-[0.4em] uppercase mb-4 block">Propósito</span>
-          <h2 className="text-4xl md:text-5xl font-heading font-medium mb-6 uppercase tracking-tight">
-            Uma especialização para <br/> <span className="text-brand-gold italic font-light">quem busca a elite</span>
+          <span className="text-[#E75C23] text-xs font-bold tracking-[0.4em] uppercase mb-4 block">Propósito</span>
+          <h2 className="text-4xl md:text-5xl font-heading font-medium mb-6 uppercase tracking-tight text-[#032832]">
+            Uma especialização para <br/> <span className="text-[#F89C22] italic font-light">quem busca a elite</span>
           </h2>
-          <div className="w-20 h-[1px] bg-brand-gold/30 mx-auto"></div>
+          <div className="w-20 h-[1px] bg-gradient-to-r from-[#E75C23] to-[#F89C22] mx-auto"></div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {cards.map((card, i) => (
             <div 
               key={i}
-              className="bg-brand-ivory p-12 shadow-[0_4px_30px_rgba(0,0,0,0.02)] border border-brand-gold/10 text-center flex flex-col items-center group"
+              className="bg-white p-12 shadow-[0_4px_30px_rgba(3,40,50,0.08)] border border-[#044F5F]/10 text-center flex flex-col items-center group hover:shadow-[0_8px_40px_rgba(231,92,35,0.15)] transition-all duration-200"
             >
-              <div className="w-16 h-16 bg-brand-gold/5 rounded-full flex items-center justify-center mb-10 group-hover:bg-brand-gold group-hover:text-white transition-[background-color,color] duration-200">
-                <card.icon className="w-6 h-6 text-brand-gold group-hover:text-brand-ivory transition-[color] duration-200" strokeWidth={1} />
+              <div className="w-16 h-16 bg-gradient-to-br from-[#E75C23]/10 to-[#F89C22]/10 rounded-full flex items-center justify-center mb-10 group-hover:bg-gradient-to-br group-hover:from-[#E75C23] group-hover:to-[#F89C22] group-hover:text-white transition-all duration-200">
+                <card.icon className="w-6 h-6 text-[#E75C23] group-hover:text-white transition-[color] duration-200" strokeWidth={1} />
               </div>
-              <h3 className="text-lg font-medium mb-6 tracking-[0.1em] uppercase">{card.title}</h3>
-              <p className="text-muted-foreground font-light leading-relaxed text-sm">{card.desc}</p>
+              <h3 className="text-lg font-medium mb-6 tracking-[0.1em] uppercase text-[#032832]">{card.title}</h3>
+              <p className="text-[#044F5F]/70 font-light leading-relaxed text-sm">{card.desc}</p>
             </div>
           ))}
+        </div>
+        <div className="text-center mt-16">
+          <button className="bg-gradient-to-r from-[#E75C23] to-[#F89C22] hover:from-[#F89C22] hover:to-[#E75C23] text-white font-bold px-10 py-5 rounded-lg transition-all duration-200 shadow-xl flex items-center gap-2 mx-auto">
+            Ver todos os diferenciais
+            <ArrowRight className="w-5 h-5" />
+          </button>
         </div>
       </div>
     </section>
@@ -125,16 +140,20 @@ export function WhatIsSection() {
                     desc: "Permite intervenções terapêuticas direcionadas e altamente eficazes." 
                   }
                 ].map((item, i) => (
-                  <div key={i} className="group p-8 bg-white/5 border border-white/10 hover:border-brand-gold/50 transition-[border-color] duration-200">
-                    <div className="w-8 h-[1px] bg-brand-gold mb-6 group-hover:w-full transition-[width] duration-200"></div>
-                    <h4 className="text-brand-gold font-bold text-xs uppercase tracking-widest mb-3">{item.title}</h4>
+                  <div key={i} className="group p-8 bg-white/5 border border-white/10 hover:border-[#F89C22]/50 transition-[border-color] duration-200">
+                    <div className="w-8 h-[1px] bg-[#F89C22] mb-6 group-hover:w-full transition-[width] duration-200"></div>
+                    <h4 className="text-[#F89C22] font-bold text-xs uppercase tracking-widest mb-3">{item.title}</h4>
                     <p className="text-white/40 text-sm font-light leading-relaxed">{item.desc}</p>
                   </div>
                 ))}
               </div>
             </div>
-
-
+            <div className="text-center mt-12">
+              <button className="bg-gradient-to-r from-[#E75C23] to-[#F89C22] hover:from-[#F89C22] hover:to-[#E75C23] text-white font-bold px-10 py-5 rounded-lg transition-all duration-200 shadow-xl flex items-center gap-2 mx-auto">
+                Entender melhor o sistema
+                <ArrowRight className="w-5 h-5" />
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -151,23 +170,29 @@ export function UniqueSection() {
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-gradient-to-b from-[#f8f9fa] to-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold">
-            Por que esta pós-graduação é <span className="text-primary">única no mundo?</span>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-[#032832]">
+            Por que esta pós-graduação é <span className="text-[#E75C23]">única no mundo?</span>
           </h2>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {features.map((f, i) => (
-            <div key={i} className="bg-brand-ivory p-12 shadow-[0_4px_30px_rgba(0,0,0,0.02)] border border-brand-gold/10 text-center flex flex-col items-center group">
-              <div className="w-16 h-16 bg-brand-gold/5 rounded-full flex items-center justify-center mb-10 group-hover:bg-brand-gold group-hover:text-white transition-[background-color,color] duration-200">
-                <Award className="w-6 h-6 text-brand-gold group-hover:text-brand-ivory transition-[color] duration-200" strokeWidth={1} />
+            <div key={i} className="bg-white p-12 shadow-[0_4px_30px_rgba(3,40,50,0.08)] border border-[#044F5F]/10 text-center flex flex-col items-center group hover:shadow-[0_8px_40px_rgba(231,92,35,0.15)] transition-all duration-200">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#E75C23]/10 to-[#F89C22]/10 rounded-full flex items-center justify-center mb-10 group-hover:bg-gradient-to-br group-hover:from-[#E75C23] group-hover:to-[#F89C22] group-hover:text-white transition-all duration-200">
+                <Award className="w-6 h-6 text-[#E75C23] group-hover:text-white transition-[color] duration-200" strokeWidth={1} />
               </div>
-              <h3 className="text-lg font-medium mb-6 tracking-[0.1em] uppercase">{f.title}</h3>
-              <p className="text-muted-foreground font-light leading-relaxed text-sm">{f.desc}</p>
+              <h3 className="text-lg font-medium mb-6 tracking-[0.1em] uppercase text-[#032832]">{f.title}</h3>
+              <p className="text-[#044F5F]/70 font-light leading-relaxed text-sm">{f.desc}</p>
             </div>
           ))}
+        </div>
+        <div className="text-center mt-16">
+          <button className="bg-gradient-to-r from-[#E75C23] to-[#F89C22] hover:from-[#F89C22] hover:to-[#E75C23] text-white font-bold px-10 py-5 rounded-lg transition-all duration-200 shadow-xl flex items-center gap-2 mx-auto">
+            Ver todas as vantagens
+            <ArrowRight className="w-5 h-5" />
+          </button>
         </div>
       </div>
     </section>
@@ -259,17 +284,17 @@ export function ModulesSection() {
   ];
 
   return (
-    <section className="py-24 bg-background">
+    <section className="py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
-          <span className="text-primary font-bold tracking-wider uppercase text-sm">Conteúdo Programático</span>
-          <h2 className="text-3xl md:text-4xl font-heading font-bold mt-2">
-            Grade Curricular <br/> <span className="text-primary">Completa e Atualizada</span>
+          <span className="text-[#E75C23] font-bold tracking-wider uppercase text-sm">Conteúdo Programático</span>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold mt-2 text-[#032832]">
+            Grade Curricular <br/> <span className="text-[#E75C23]">Completa e Atualizada</span>
           </h2>
           
           <div className="flex justify-center gap-8 md:gap-16 mt-8 py-6 border-y border-border max-w-2xl mx-auto">
             <div className="text-center">
-              <p className="text-2xl font-bold text-primary">7</p>
+              <p className="text-2xl font-bold text-[#E75C23]">7</p>
               <p className="text-xs text-muted-foreground uppercase font-bold tracking-tighter">Módulos</p>
             </div>
             <div className="w-px h-10 bg-border"></div>
@@ -345,8 +370,9 @@ export function ModulesSection() {
         </div>
         
         <div className="mt-12 text-center">
-           <button className="px-8 py-4 bg-primary text-white font-bold rounded-full hover:bg-primary/90 transition-[background-color] duration-200 shadow-lg shadow-primary/20">
+           <button className="px-10 py-5 bg-gradient-to-r from-[#E75C23] to-[#F89C22] hover:from-[#F89C22] hover:to-[#E75C23] text-white font-bold rounded-lg transition-all duration-200 shadow-xl flex items-center gap-2 mx-auto">
              Quero o conteúdo completo em PDF
+             <ArrowRight className="w-5 h-5" />
            </button>
         </div>
       </div>
@@ -356,9 +382,12 @@ export function ModulesSection() {
 
 export function TimelineSection() {
   return (
-    <section className="py-24 bg-white border-y border-border/50">
-      <div className="container mx-auto px-4 md:px-6">
-        <h2 className="text-3xl font-heading font-bold text-center mb-16">Como funciona sua jornada</h2>
+    <section className="py-24 bg-gradient-to-b from-[#044F5F] to-[#032832] text-white relative overflow-hidden">
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-[#F89C22]/20 rounded-full blur-[80px]"></div>
+      </div>
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
+        <h2 className="text-3xl font-heading font-bold text-center mb-16 text-white">Como funciona sua jornada</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {[
@@ -367,14 +396,20 @@ export function TimelineSection() {
             { icon: Microscope, title: "Prática", desc: "Discussão de casos" },
             { icon: Award, title: "Certificação", desc: "Reconhecida pelo MEC" }
           ].map((step, i) => (
-            <div key={i} className="bg-brand-ivory p-12 shadow-[0_4px_30px_rgba(0,0,0,0.02)] border border-brand-gold/10 text-center flex flex-col items-center group">
-              <div className="w-16 h-16 bg-brand-gold/5 rounded-full flex items-center justify-center mb-10 group-hover:bg-brand-gold group-hover:text-white transition-[background-color,color] duration-200">
-                <step.icon className="w-6 h-6 text-brand-gold group-hover:text-brand-ivory transition-[color] duration-200" strokeWidth={1} />
+            <div key={i} className="bg-white/10 backdrop-blur-sm p-12 shadow-[0_4px_30px_rgba(0,0,0,0.3)] border border-white/20 text-center flex flex-col items-center group hover:bg-white/20 transition-all duration-200">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#E75C23]/20 to-[#F89C22]/20 rounded-full flex items-center justify-center mb-10 group-hover:bg-gradient-to-br group-hover:from-[#E75C23] group-hover:to-[#F89C22] group-hover:text-white transition-all duration-200">
+                <step.icon className="w-6 h-6 text-[#F89C22] group-hover:text-white transition-[color] duration-200" strokeWidth={1} />
               </div>
-              <h3 className="text-lg font-medium mb-6 tracking-[0.1em] uppercase">{step.title}</h3>
-              <p className="text-muted-foreground font-light leading-relaxed text-sm">{step.desc}</p>
+              <h3 className="text-lg font-medium mb-6 tracking-[0.1em] uppercase text-white">{step.title}</h3>
+              <p className="text-white/80 font-light leading-relaxed text-sm">{step.desc}</p>
             </div>
           ))}
+        </div>
+        <div className="text-center mt-16">
+          <button className="bg-gradient-to-r from-[#E75C23] to-[#F89C22] hover:from-[#F89C22] hover:to-[#E75C23] text-white font-bold px-10 py-5 rounded-lg transition-all duration-200 shadow-xl flex items-center gap-2 mx-auto">
+            Iniciar minha jornada agora
+            <ArrowRight className="w-5 h-5" />
+          </button>
         </div>
       </div>
     </section>
@@ -434,13 +469,13 @@ export function Footer() {
 
 export function TestimonialsSection() {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-gradient-to-b from-white to-[#f8f9fa]">
       <div className="container mx-auto px-4 md:px-6">
-        <h2 className="text-3xl font-heading font-bold text-center mb-16">Quem já está transformando a carreira</h2>
+        <h2 className="text-3xl font-heading font-bold text-center mb-16 text-[#032832]">Quem já está transformando a carreira</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
           {[1, 2, 3].map((i) => (
-            <div key={i} className="bg-brand-ivory p-12 shadow-[0_4px_30px_rgba(0,0,0,0.02)] border border-brand-gold/10 text-center flex flex-col items-center group">
-              <p className="text-muted-foreground mb-8 italic font-light leading-relaxed text-sm">
+            <div key={i} className="bg-white p-12 shadow-[0_4px_30px_rgba(3,40,50,0.08)] border border-[#044F5F]/10 text-center flex flex-col items-center group hover:shadow-[0_8px_40px_rgba(231,92,35,0.15)] transition-all duration-200">
+              <p className="text-[#044F5F]/70 mb-8 italic font-light leading-relaxed text-sm">
                 Essa pós-graduação mudou completamente minha visão clínica. Hoje consigo tratar pacientes que antes eu considerava sem solução.
               </p>
               <div className="flex items-center gap-4">
@@ -448,12 +483,18 @@ export function TestimonialsSection() {
                   <img src={`https://ui-avatars.com/api/?name=Vet+${i}&background=0D1117&color=fff`} alt="Avatar" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-bold text-sm text-foreground">Dra. Ana Souza</h4>
-                  <p className="text-xs text-muted-foreground">Veterinária Integrativa</p>
+                  <h4 className="font-bold text-sm text-[#032832]">Dra. Ana Souza</h4>
+                  <p className="text-xs text-[#044F5F]/60">Veterinária Integrativa</p>
                 </div>
               </div>
             </div>
           ))}
+        </div>
+        <div className="text-center mt-16">
+          <button className="bg-gradient-to-r from-[#E75C23] to-[#F89C22] hover:from-[#F89C22] hover:to-[#E75C23] text-white font-bold px-10 py-5 rounded-lg transition-all duration-200 shadow-xl flex items-center gap-2 mx-auto">
+            Quero fazer parte deste time
+            <ArrowRight className="w-5 h-5" />
+          </button>
         </div>
       </div>
     </section>

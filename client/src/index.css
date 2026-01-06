@@ -9,24 +9,29 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
   
-  /* The "Celestial Emerald & Antique Gold" Palette */
-  --color-brand-green: hsl(165 40% 6%);      /* Midnight Emerald - Almost Black */
-  --color-brand-gold: hsl(42 45% 55%);       /* Antique Gold - Muted & Sophisticated */
-  --color-brand-gold-light: hsl(42 45% 70%); /* Luminous Gold for highlights */
-  --color-brand-ivory: hsl(40 20% 98%);      /* Elegant Ivory - Not pure white */
+  /* Nova Paleta de Cores - Laranja e Teal */
+  --color-brand-orange: #E75C23;      /* Laranja escuro */
+  --color-brand-orange-light: #F89C22; /* Laranja claro */
+  --color-brand-teal-dark: #032832;    /* Teal muito escuro */
+  --color-brand-teal: #044F5F;         /* Teal médio */
+  --color-brand-ivory: #f8f9fa;        /* Ivory suave */
+  
+  /* Mantendo compatibilidade */
+  --color-brand-green: #032832;        /* Mesmo que teal-dark */
+  --color-brand-gold: #F89C22;         /* Mesmo que orange-light */
 
   --color-background: var(--color-brand-ivory);
-  --color-foreground: var(--color-brand-green);
+  --color-foreground: var(--color-brand-teal-dark);
 
-  --color-primary: var(--color-brand-green);
-  --color-primary-foreground: var(--color-brand-gold);
+  --color-primary: var(--color-brand-orange);
+  --color-primary-foreground: #ffffff;
 
-  --color-accent: var(--color-brand-gold);
-  --color-accent-foreground: var(--color-brand-green);
+  --color-accent: var(--color-brand-orange-light);
+  --color-accent-foreground: var(--color-brand-teal-dark);
 
-  --color-border: hsl(42 20% 85%);
-  --color-muted: hsl(42 10% 92%);
-  --color-muted-foreground: hsl(165 10% 40%);
+  --color-border: rgba(3, 40, 50, 0.15);
+  --color-muted: rgba(3, 40, 50, 0.05);
+  --color-muted-foreground: rgba(3, 40, 50, 0.7);
 
   --font-sans: 'Inter', sans-serif;
   --font-heading: 'Montserrat', sans-serif;
@@ -56,8 +61,12 @@
   border-color: rgba(184, 155, 94, 0.3);
 }
 
-.gold-gradient-bg {
-  background: linear-gradient(135deg, #b89b5e 0%, #d4b475 50%, #b89b5e 100%);
+.orange-gradient-bg {
+  background: linear-gradient(135deg, #E75C23 0%, #F89C22 100%);
+}
+
+.teal-gradient-bg {
+  background: linear-gradient(135deg, #032832 0%, #044F5F 100%);
 }
 
 /* Custom Animations */
