@@ -408,23 +408,54 @@ export function TimelineSection() {
   );
 }
 
+import anhangueraLogo from "@assets/image_1767725302166.png";
+import plantandoLogo from "@assets/image_1767725350933.png";
+
 export function PartnersSection() {
   return (
-    <section className="py-16 bg-muted/30">
+    <section className="py-24 bg-brand-ivory/50 border-y border-brand-gold/10">
       <div className="container mx-auto px-4 md:px-6 text-center">
-        <p className="text-sm font-bold text-muted-foreground uppercase tracking-widest mb-8">Certificação e Parceria</p>
-        <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-80 grayscale hover:grayscale-0 transition-all duration-500">
-           <div className="text-2xl font-heading font-black text-primary flex items-center gap-2">
-             <Leaf className="w-8 h-8" />
-             Plantando Conhecimento
+        <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-12 block">Instituições Responsáveis</span>
+        <div className="flex flex-col md:flex-row justify-center items-center gap-16 md:gap-32 opacity-80 grayscale hover:grayscale-0 transition-all duration-700">
+           <div className="flex flex-col items-center gap-4">
+             <img src={plantandoLogo} alt="Plantando Conhecimento" className="h-20 w-auto object-contain" />
+             <span className="text-[10px] text-brand-gold/60 uppercase tracking-widest">Realização</span>
            </div>
-           <div className="text-2xl font-heading font-bold text-gray-700 flex items-center gap-2">
-             <HeartHandshake className="w-8 h-8" />
-             Universidade Anhanguera
+           <div className="hidden md:block w-px h-16 bg-brand-gold/10"></div>
+           <div className="flex flex-col items-center gap-4">
+             <img src={anhangueraLogo} alt="Universidade Anhanguera" className="h-16 w-auto object-contain" />
+             <span className="text-[10px] text-brand-gold/60 uppercase tracking-widest">Certificação Acadêmica</span>
            </div>
         </div>
       </div>
     </section>
+  );
+}
+
+export function Footer() {
+  return (
+    <footer className="py-24 bg-brand-green text-brand-ivory">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-12 border-b border-brand-gold/10 pb-16 mb-12">
+          <div className="flex items-center gap-8 grayscale brightness-200 opacity-70">
+            <img src={anhangueraLogo} alt="Anhanguera" className="h-10 w-auto" />
+            <div className="w-[1px] h-6 bg-brand-gold/30"></div>
+            <img src={plantandoLogo} alt="Plantando Conhecimento" className="h-10 w-auto" />
+          </div>
+          
+          <div className="flex gap-8 text-[10px] font-bold tracking-[0.2em] uppercase text-brand-gold/60">
+            <a href="#" className="hover:text-brand-gold transition-colors">Termos</a>
+            <a href="#" className="hover:text-brand-gold transition-colors">Privacidade</a>
+            <a href="#" className="hover:text-brand-gold transition-colors">Contato</a>
+          </div>
+        </div>
+        
+        <div className="text-center text-[10px] uppercase tracking-[0.3em] text-brand-gold/40 leading-relaxed">
+          © 2026 World's First Veterinary Endocannabinology Post-Graduation. <br/>
+          Todos os direitos reservados. Design de Alta Performance.
+        </div>
+      </div>
+    </footer>
   );
 }
 

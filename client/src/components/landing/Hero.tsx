@@ -2,6 +2,9 @@ import { motion } from "framer-motion";
 import { ArrowRight, Microscope, ShieldCheck, Award, Users } from "lucide-react";
 import heroBg from "@assets/generated_images/minimalist_modern_medical_architecture_interior.png";
 
+import anhangueraLogo from "@assets/image_1767725302166.png";
+import plantandoLogo from "@assets/image_1767725350933.png";
+
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center bg-brand-ivory overflow-hidden pt-20">
@@ -11,12 +14,17 @@ export function Hero() {
         {/* Subtle radial gradients to create depth without dark emerald */}
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-gold/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4"></div>
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-brand-gold/3 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/4"></div>
-        
-        {/* Subtle texture/noise from index.css applies to body, so we keep it clean here */}
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
+        {/* Logos Header - Discreto e Premium */}
+        <div className="absolute top-8 left-1/2 -translate-x-1/2 flex items-center gap-12 opacity-80 grayscale hover:grayscale-0 transition-all duration-700">
+          <img src={anhangueraLogo} alt="Anhanguera" className="h-10 md:h-12 w-auto object-contain" />
+          <div className="w-[1px] h-8 bg-brand-gold/20"></div>
+          <img src={plantandoLogo} alt="Plantando Conhecimento" className="h-10 md:h-12 w-auto object-contain" />
+        </div>
+
+        <div className="flex flex-col items-center text-center max-w-5xl mx-auto mt-20">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
