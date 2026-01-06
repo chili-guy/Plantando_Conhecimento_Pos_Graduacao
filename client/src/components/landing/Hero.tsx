@@ -7,7 +7,7 @@ import plantandoLogo from "@assets/image-removebg-preview_1767725759434.png";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center bg-brand-ivory overflow-hidden pt-20">
+    <section className="relative min-h-screen flex items-center bg-brand-ivory overflow-hidden pt-12">
       {/* Refined Background - Matching the rest of the page (Ivory & Gold hints) */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-brand-ivory"></div>
@@ -17,7 +17,7 @@ export function Hero() {
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="flex flex-col items-center text-center max-w-5xl mx-auto mt-20">
+        <div className="flex flex-col items-center text-center max-w-5xl mx-auto mt-8">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}

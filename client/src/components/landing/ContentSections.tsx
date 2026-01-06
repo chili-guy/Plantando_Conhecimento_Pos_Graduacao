@@ -5,7 +5,6 @@ import {
   Microscope, Leaf, Scale, HeartHandshake, ChevronDown, 
   Clock, ShieldCheck 
 } from "lucide-react";
-import infographicImage from "@assets/image_1767727916521.png";
 import scienceImage from "@assets/generated_images/abstract_endocannabinoid_system_illustration.png";
 
 export function ProblemSection() {
@@ -135,14 +134,14 @@ export function WhatIsSection() {
       
       <div className="container mx-auto px-4 md:px-6 relative z-20">
         <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-12 gap-12 items-center">
+          <div className="flex justify-center">
             
             {/* Left Content */}
             <motion.div 
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="lg:col-span-7 space-y-10"
+              className="max-w-3xl space-y-10"
             >
               <div>
                 <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-6 block">Conhecimento Fundamental</span>
@@ -176,29 +175,6 @@ export function WhatIsSection() {
               </div>
             </motion.div>
 
-            {/* Right Visual Element */}
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              className="lg:col-span-5 relative group"
-            >
-              <div className="relative z-10 border border-brand-gold/20 p-4 bg-brand-green/50 backdrop-blur-sm">
-                <img 
-                  src={infographicImage} 
-                  alt="Sistema Endocanabinoide Infográfico" 
-                  className="w-full h-auto grayscale group-hover:grayscale-0 transition-all duration-1000"
-                />
-                {/* Accent lines */}
-                <div className="absolute -top-4 -right-4 w-24 h-24 border-t-2 border-r-2 border-brand-gold/40"></div>
-                <div className="absolute -bottom-4 -left-4 w-24 h-24 border-b-2 border-l-2 border-brand-gold/40"></div>
-              </div>
-              
-              {/* Floating label */}
-              <div className="absolute -bottom-8 -right-8 bg-brand-gold text-brand-green px-6 py-4 text-[10px] font-bold uppercase tracking-[0.2em] shadow-2xl z-20">
-                Conectividade Biológica
-              </div>
-            </motion.div>
 
           </div>
         </div>
@@ -223,12 +199,14 @@ export function UniqueSection() {
             Por que esta pós-graduação é <span className="text-primary">única no mundo?</span>
           </h2>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {features.map((f, i) => (
-            <div key={i} className="group p-6 rounded-2xl bg-muted/20 border border-transparent hover:border-primary/20 hover:bg-white hover:shadow-xl transition-all duration-300 text-center flex flex-col items-center">
-              <Award className="w-10 h-10 text-primary mb-4 group-hover:scale-110 transition-transform" />
-              <h3 className="text-xl font-bold mb-2">{f.title}</h3>
-              <p className="text-muted-foreground">{f.desc}</p>
+            <div key={i} className="bg-brand-ivory p-12 shadow-[0_4px_30px_rgba(0,0,0,0.02)] border border-brand-gold/10 text-center flex flex-col items-center group">
+              <div className="w-16 h-16 bg-brand-gold/5 rounded-full flex items-center justify-center mb-10 group-hover:bg-brand-gold group-hover:text-white transition-all duration-700">
+                <Award className="w-6 h-6 text-brand-gold group-hover:text-brand-ivory transition-colors" strokeWidth={1} />
+              </div>
+              <h3 className="text-lg font-medium mb-6 tracking-[0.1em] uppercase">{f.title}</h3>
+              <p className="text-muted-foreground font-light leading-relaxed text-sm">{f.desc}</p>
             </div>
           ))}
         </div>
@@ -418,25 +396,22 @@ export function TimelineSection() {
     <section className="py-24 bg-white border-y border-border/50">
       <div className="container mx-auto px-4 md:px-6">
         <h2 className="text-3xl font-heading font-bold text-center mb-16">Como funciona sua jornada</h2>
-        <div className="relative">
-          <div className="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gray-200 -translate-y-1/2 z-0"></div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
-            {[
-              { icon: BookOpen, title: "Aulas Online", desc: "Ao vivo e gravadas" },
-              { icon: Users, title: "Mentoria", desc: "Encontros com experts" },
-              { icon: Microscope, title: "Prática", desc: "Discussão de casos" },
-              { icon: Award, title: "Certificação", desc: "Reconhecida pelo MEC" }
-            ].map((step, i) => (
-              <div key={i} className="flex flex-col items-center text-center bg-white p-4">
-                <div className="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center mb-4 shadow-lg ring-4 ring-white">
-                  <step.icon className="w-8 h-8" />
-                </div>
-                <h3 className="text-lg font-bold mb-1">{step.title}</h3>
-                <p className="text-sm text-muted-foreground">{step.desc}</p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          {[
+            { icon: BookOpen, title: "Aulas Online", desc: "Ao vivo e gravadas" },
+            { icon: Users, title: "Mentoria", desc: "Encontros com experts" },
+            { icon: Microscope, title: "Prática", desc: "Discussão de casos" },
+            { icon: Award, title: "Certificação", desc: "Reconhecida pelo MEC" }
+          ].map((step, i) => (
+            <div key={i} className="bg-brand-ivory p-12 shadow-[0_4px_30px_rgba(0,0,0,0.02)] border border-brand-gold/10 text-center flex flex-col items-center group">
+              <div className="w-16 h-16 bg-brand-gold/5 rounded-full flex items-center justify-center mb-10 group-hover:bg-brand-gold group-hover:text-white transition-all duration-700">
+                <step.icon className="w-6 h-6 text-brand-gold group-hover:text-brand-ivory transition-colors" strokeWidth={1} />
               </div>
-            ))}
-          </div>
+              <h3 className="text-lg font-medium mb-6 tracking-[0.1em] uppercase">{step.title}</h3>
+              <p className="text-muted-foreground font-light leading-relaxed text-sm">{step.desc}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -451,7 +426,7 @@ export function PartnersSection() {
     <section className="py-24 bg-brand-ivory/50 border-y border-brand-gold/10">
       <div className="container mx-auto px-4 md:px-6 text-center">
         <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-12 block">Instituições Responsáveis</span>
-        <div className="flex flex-col md:flex-row justify-center items-center gap-16 md:gap-32 opacity-80 grayscale hover:grayscale-0 transition-all duration-700">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-16 md:gap-32 opacity-80">
            <div className="flex flex-col items-center gap-4">
              <img src={plantandoLogo} alt="Plantando Conhecimento" className="h-20 w-auto object-contain" />
              <span className="text-[10px] text-brand-gold/60 uppercase tracking-widest">Realização</span>
@@ -472,7 +447,7 @@ export function Footer() {
     <footer className="py-24 bg-brand-green text-brand-ivory">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-12 border-b border-brand-gold/10 pb-16 mb-12">
-          <div className="flex items-center gap-8 grayscale brightness-200 opacity-70">
+          <div className="flex items-center gap-8 brightness-200 opacity-70">
             <img src={anhangueraLogo} alt="Anhanguera" className="h-10 w-auto" />
             <div className="w-[1px] h-6 bg-brand-gold/30"></div>
             <img src={plantandoLogo} alt="Plantando Conhecimento" className="h-10 w-auto" />
@@ -499,19 +474,18 @@ export function TestimonialsSection() {
     <section className="py-24 bg-white">
       <div className="container mx-auto px-4 md:px-6">
         <h2 className="text-3xl font-heading font-bold text-center mb-16">Quem já está transformando a carreira</h2>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
           {[1, 2, 3].map((i) => (
-            <div key={i} className="bg-background p-8 rounded-2xl border border-border/50 shadow-sm relative">
-              <div className="text-primary text-4xl font-serif absolute top-6 right-6">"</div>
-              <p className="text-muted-foreground mb-6 italic">
-                "Essa pós-graduação mudou completamente minha visão clínica. Hoje consigo tratar pacientes que antes eu considerava sem solução."
+            <div key={i} className="bg-brand-ivory p-12 shadow-[0_4px_30px_rgba(0,0,0,0.02)] border border-brand-gold/10 text-center flex flex-col items-center group">
+              <p className="text-muted-foreground mb-8 italic font-light leading-relaxed text-sm">
+                Essa pós-graduação mudou completamente minha visão clínica. Hoje consigo tratar pacientes que antes eu considerava sem solução.
               </p>
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-gray-200 overflow-hidden">
                   <img src={`https://ui-avatars.com/api/?name=Vet+${i}&background=0D1117&color=fff`} alt="Avatar" />
                 </div>
-                <div>
-                  <h4 className="font-bold text-sm">Dra. Ana Souza</h4>
+                <div className="text-left">
+                  <h4 className="font-bold text-sm text-foreground">Dra. Ana Souza</h4>
                   <p className="text-xs text-muted-foreground">Veterinária Integrativa</p>
                 </div>
               </div>
