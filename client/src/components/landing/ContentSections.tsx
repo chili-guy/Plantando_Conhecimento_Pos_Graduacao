@@ -5,10 +5,8 @@ import {
   Microscope, Leaf, Scale, HeartHandshake, ChevronDown, 
   Clock, ShieldCheck 
 } from "lucide-react";
-import problemImage from "@assets/generated_images/veterinarian_examining_a_dog_in_modern_clinic.png";
 import scienceImage from "@assets/generated_images/abstract_endocannabinoid_system_illustration.png";
 
-// Animation variants
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
@@ -36,10 +34,11 @@ export function ProblemSection() {
             variants={fadeIn}
             className="space-y-6"
           >
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">
-              A medicina veterinária mudou — <span className="text-primary">e sua formação acompanhou essa evolução?</span>
+            <span className="text-brand-gold text-xs font-bold tracking-[0.4em] uppercase mb-4 block">Evolução</span>
+            <h2 className="text-3xl md:text-4xl font-heading font-medium text-brand-gold uppercase tracking-tight">
+              A medicina veterinária mudou — <br/> <span className="italic font-light opacity-80">e sua formação acompanhou essa evolução?</span>
             </h2>
-            <div className="space-y-4 text-lg text-muted-foreground">
+            <div className="space-y-4 text-lg text-brand-gold/70 font-light">
               <p>
                 Tutores mais exigentes buscam terapias que vão além do convencional. 
                 Os casos clínicos tornam-se cada vez mais complexos e crônicos.
@@ -51,8 +50,8 @@ export function ProblemSection() {
                   "Falta de formação aprofundada em Endocanabinologia"
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-primary" />
-                    <span className="text-foreground font-medium">{item}</span>
+                    <CheckCircle2 className="w-5 h-5 text-brand-gold" />
+                    <span className="text-brand-gold/90 font-medium tracking-wide">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -65,11 +64,11 @@ export function ProblemSection() {
             variants={fadeIn}
             className="relative"
           >
-            <div className="absolute -inset-4 bg-primary/10 rounded-2xl -z-10 blur-xl"></div>
+            <div className="absolute -inset-4 bg-brand-gold/10 -z-10 blur-xl"></div>
             <img 
               src="/cannabis-dog.png" 
               alt="Administração de cannabis medicinal em cão" 
-              className="rounded-xl shadow-2xl w-full h-auto object-cover"
+              className="shadow-2xl w-full h-auto object-cover"
             />
           </motion.div>
         </div>
@@ -90,9 +89,9 @@ export function SolutionSection() {
     <section className="py-32 bg-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-24 max-w-3xl mx-auto">
-          <span className="text-brand-gold text-xs font-bold tracking-[0.4em] uppercase mb-4 block">Propósito</span>
-          <h2 className="text-4xl md:text-5xl font-heading font-medium mb-6 uppercase tracking-tight">
-            Uma especialização para <br/> <span className="text-brand-gold italic font-light">quem busca a elite</span>
+          <span className="text-brand-gold text-xs font-bold tracking-[0.4em] uppercase mb-4 block text-center">Propósito</span>
+          <h2 className="text-4xl md:text-5xl font-heading font-medium mb-6 uppercase tracking-tight text-brand-gold">
+            Uma especialização para <br/> <span className="italic font-light opacity-80">quem busca a elite</span>
           </h2>
           <div className="w-20 h-[1px] bg-brand-gold/30 mx-auto"></div>
         </div>
@@ -113,8 +112,8 @@ export function SolutionSection() {
               <div className="w-16 h-16 bg-brand-gold/5 rounded-full flex items-center justify-center mb-10 group-hover:bg-brand-gold group-hover:text-white transition-all duration-700">
                 <card.icon className="w-6 h-6 text-brand-gold group-hover:text-brand-ivory transition-colors" strokeWidth={1} />
               </div>
-              <h3 className="text-lg font-medium mb-6 tracking-[0.1em] uppercase">{card.title}</h3>
-              <p className="text-muted-foreground font-light leading-relaxed text-sm">{card.desc}</p>
+              <h3 className="text-lg font-medium mb-6 tracking-[0.1em] uppercase text-brand-gold">{card.title}</h3>
+              <p className="text-brand-gold/70 font-light leading-relaxed text-sm">{card.desc}</p>
             </motion.div>
           ))}
         </motion.div>
@@ -125,11 +124,10 @@ export function SolutionSection() {
 
 export function WhatIsSection() {
   return (
-    <section className="py-24 bg-foreground text-white overflow-hidden relative">
-      <div className="absolute inset-0 z-0 opacity-20">
+    <section className="py-24 bg-brand-green text-brand-gold overflow-hidden relative border-y border-brand-gold/10">
+      <div className="absolute inset-0 z-0 opacity-10 grayscale">
          <img src={scienceImage} alt="Sistema Endocanabinoide" className="w-full h-full object-cover" />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-r from-foreground via-foreground/90 to-transparent z-10"></div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-20">
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -139,33 +137,31 @@ export function WhatIsSection() {
             viewport={{ once: true }}
             variants={fadeIn}
           >
-            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6 text-white">
-              O que é o <span className="text-accent">Sistema Endocanabinoide?</span>
+            <span className="text-brand-gold text-xs font-bold tracking-[0.4em] uppercase mb-4 block">Fisiologia</span>
+            <h2 className="text-3xl md:text-4xl font-heading font-medium mb-6 uppercase tracking-tight">
+              O que é o <br/><span className="italic font-light opacity-80 text-brand-gold-light">Sistema Endocanabinoide?</span>
             </h2>
-            <p className="text-gray-300 text-lg mb-6 leading-relaxed">
+            <p className="text-brand-gold/60 text-lg mb-8 leading-relaxed font-light">
               Descoberto há poucas décadas, é o maestro fisiológico do organismo. 
-              Ele regula o equilíbrio (homeostase) de quase todos os sistemas do corpo animal, 
-              desde o controle da dor e inflamação até o humor e apetite.
+              Ele regula o equilíbrio (homeostase) de quase todos os sistemas do corpo animal.
             </p>
             <div className="space-y-4">
-              <div className="flex gap-4 p-4 bg-white/5 rounded-lg backdrop-blur-sm border border-white/10">
-                <div className="w-1 h-full bg-accent rounded-full"></div>
+              <div className="flex gap-6 p-6 border border-brand-gold/10 bg-white/5 backdrop-blur-sm">
+                <div className="w-[1px] h-auto bg-brand-gold/30"></div>
                 <div>
-                  <h4 className="font-bold text-accent mb-1">Essencial para a Saúde</h4>
-                  <p className="text-sm text-gray-300">Sem ele, o corpo não responde adequadamente a doenças.</p>
+                  <h4 className="font-medium text-brand-gold uppercase tracking-widest text-sm mb-2">Essencial para a Saúde</h4>
+                  <p className="text-xs text-brand-gold/50 font-light tracking-wide">Sem ele, o corpo não responde adequadamente a doenças.</p>
                 </div>
               </div>
-              <div className="flex gap-4 p-4 bg-white/5 rounded-lg backdrop-blur-sm border border-white/10">
-                <div className="w-1 h-full bg-accent rounded-full"></div>
+              <div className="flex gap-6 p-6 border border-brand-gold/10 bg-white/5 backdrop-blur-sm">
+                <div className="w-[1px] h-auto bg-brand-gold/30"></div>
                 <div>
-                  <h4 className="font-bold text-accent mb-1">Uso Ético e Seguro</h4>
-                  <p className="text-sm text-gray-300">A cannabis medicinal atua diretamente nesses receptores para restaurar o equilíbrio.</p>
+                  <h4 className="font-medium text-brand-gold uppercase tracking-widest text-sm mb-2">Uso Ético e Seguro</h4>
+                  <p className="text-xs text-brand-gold/50 font-light tracking-wide">A cannabis medicinal atua diretamente nesses receptores para restaurar o equilíbrio.</p>
                 </div>
               </div>
             </div>
           </motion.div>
-          <div className="hidden md:block">
-          </div>
         </div>
       </div>
     </section>
@@ -184,16 +180,17 @@ export function UniqueSection() {
     <section className="py-24 bg-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold">
-            Por que esta pós-graduação é <span className="text-primary">única no mundo?</span>
+          <span className="text-brand-gold text-xs font-bold tracking-[0.4em] uppercase mb-4 block">Exclusividade</span>
+          <h2 className="text-3xl md:text-4xl font-heading font-medium text-brand-gold uppercase tracking-tight">
+            Por que esta pós-graduação é <br/> <span className="italic font-light opacity-80">única no mundo?</span>
           </h2>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((f, i) => (
-            <div key={i} className="group p-6 rounded-2xl bg-muted/20 border border-transparent hover:border-primary/20 hover:bg-white hover:shadow-xl transition-all duration-300 text-center flex flex-col items-center">
-              <Award className="w-10 h-10 text-primary mb-4 group-hover:scale-110 transition-transform" />
-              <h3 className="text-xl font-bold mb-2">{f.title}</h3>
-              <p className="text-muted-foreground">{f.desc}</p>
+            <div key={i} className="group p-10 rounded-none bg-brand-ivory border border-brand-gold/10 hover:border-brand-gold/30 hover:shadow-xl transition-all duration-500 text-center flex flex-col items-center">
+              <Award className="w-10 h-10 text-brand-gold mb-6 group-hover:scale-110 transition-transform" />
+              <h3 className="text-lg font-medium mb-4 tracking-wide text-brand-gold uppercase">{f.title}</h3>
+              <p className="text-brand-gold/70 font-light text-sm leading-relaxed">{f.desc}</p>
             </div>
           ))}
         </div>
@@ -287,28 +284,28 @@ export function ModulesSection() {
   ];
 
   return (
-    <section className="py-24 bg-background">
+    <section className="py-24 bg-brand-ivory">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
-          <span className="text-primary font-bold tracking-wider uppercase text-sm">Conteúdo Programático</span>
-          <h2 className="text-3xl md:text-4xl font-heading font-bold mt-2">
-            Grade Curricular <br/> <span className="text-primary">Completa e Atualizada</span>
+          <span className="text-brand-gold text-xs font-bold tracking-[0.4em] uppercase mb-4 block">Conteúdo Programático</span>
+          <h2 className="text-3xl md:text-4xl font-heading font-medium text-brand-gold uppercase tracking-tight text-center">
+            Grade Curricular <br/> <span className="italic font-light opacity-80">Completa e Atualizada</span>
           </h2>
           
-          <div className="flex justify-center gap-8 md:gap-16 mt-8 py-6 border-y border-border max-w-2xl mx-auto">
+          <div className="flex justify-center gap-8 md:gap-16 mt-8 py-6 border-y border-brand-gold/20 max-w-2xl mx-auto">
             <div className="text-center">
-              <p className="text-2xl font-bold text-primary">7</p>
-              <p className="text-xs text-muted-foreground uppercase font-bold tracking-tighter">Módulos</p>
+              <p className="text-2xl font-medium text-brand-gold tracking-widest">7</p>
+              <p className="text-[10px] text-brand-gold/60 uppercase font-bold tracking-[0.2em]">Módulos</p>
             </div>
-            <div className="w-px h-10 bg-border"></div>
+            <div className="w-px h-10 bg-brand-gold/10"></div>
             <div className="text-center">
-              <p className="text-2xl font-bold text-primary">300h</p>
-              <p className="text-xs text-muted-foreground uppercase font-bold tracking-tighter">Carga Horária</p>
+              <p className="text-2xl font-medium text-brand-gold tracking-widest">300h</p>
+              <p className="text-[10px] text-brand-gold/60 uppercase font-bold tracking-[0.2em]">Carga Horária</p>
             </div>
-            <div className="w-px h-10 bg-border"></div>
+            <div className="w-px h-10 bg-brand-gold/10"></div>
             <div className="text-center">
-              <p className="text-2xl font-bold text-primary">12</p>
-              <p className="text-xs text-muted-foreground uppercase font-bold tracking-tighter">Meses</p>
+              <p className="text-2xl font-medium text-brand-gold tracking-widest">12</p>
+              <p className="text-[10px] text-brand-gold/60 uppercase font-bold tracking-[0.2em]">Meses</p>
             </div>
           </div>
         </div>
@@ -317,27 +314,27 @@ export function ModulesSection() {
           {modules.map((mod, i) => (
             <div 
               key={i} 
-              className={`group bg-white rounded-xl border transition-all duration-300 ${openModule === i ? 'border-primary ring-1 ring-primary/20 shadow-lg' : 'border-border hover:border-primary/50 shadow-sm'}`}
+              className={`bg-white rounded-none border transition-all duration-500 ${openModule === i ? 'border-brand-gold shadow-xl' : 'border-brand-gold/10 hover:border-brand-gold/30'}`}
             >
               <button 
                 onClick={() => setOpenModule(openModule === i ? null : i)}
-                className="w-full flex items-center justify-between p-6 text-left"
+                className="w-full flex items-center justify-between p-8 text-left"
               >
-                <div className="flex items-start gap-6">
-                  <span className="text-2xl font-bold text-accent/40 font-heading">
+                <div className="flex items-start gap-8">
+                  <span className="text-3xl font-light text-brand-gold/30 font-heading italic">
                     {(i + 1).toString().padStart(2, '0')}
                   </span>
                   <div>
-                    <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">{mod.title}</h3>
-                    <p className="text-sm text-muted-foreground mt-1">{mod.desc}</p>
+                    <h3 className="text-xl font-medium text-brand-gold tracking-tight uppercase">{mod.title}</h3>
+                    <p className="text-sm text-brand-gold/50 font-light mt-1 tracking-wide">{mod.desc}</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-4">
-                  <div className="flex items-center gap-1.5 text-xs text-muted-foreground bg-muted/50 px-2 py-1 rounded">
-                    <Clock className="w-3.5 h-3.5" />
+                <div className="flex items-center gap-6">
+                  <div className="flex items-center gap-2 text-[10px] text-brand-gold/60 border border-brand-gold/20 px-3 py-1 uppercase tracking-widest font-bold">
+                    <Clock className="w-3 h-3" strokeWidth={3} />
                     {mod.duration}
                   </div>
-                  <ChevronDown className={`w-5 h-5 text-muted-foreground transition-transform duration-300 ${openModule === i ? 'rotate-180 text-primary' : ''}`} />
+                  <ChevronDown className={`w-5 h-5 text-brand-gold transition-transform duration-500 ${openModule === i ? 'rotate-180' : ''}`} strokeWidth={1} />
                 </div>
               </button>
               
@@ -347,16 +344,16 @@ export function ModulesSection() {
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3 }}
+                    transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
                     className="overflow-hidden"
                   >
-                    <div className="px-16 pb-8">
-                      <div className="h-px bg-border mb-6"></div>
-                      <div className="grid md:grid-cols-2 gap-x-12 gap-y-3">
+                    <div className="px-20 pb-10">
+                      <div className="h-[1px] bg-brand-gold/10 mb-8"></div>
+                      <div className="grid md:grid-cols-2 gap-x-12 gap-y-4">
                         {mod.topics.map((topic, j) => (
-                          <div key={j} className="flex items-center gap-3">
-                            <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
-                            <span className="text-sm text-muted-foreground">{topic}</span>
+                          <div key={j} className="flex items-center gap-4">
+                            <div className="w-1.5 h-1.5 rounded-full bg-brand-gold/40"></div>
+                            <span className="text-sm text-brand-gold/70 font-light tracking-wide">{topic}</span>
                           </div>
                         ))}
                       </div>
@@ -368,9 +365,9 @@ export function ModulesSection() {
           ))}
         </div>
         
-        <div className="mt-12 text-center">
-           <button className="px-8 py-4 bg-primary text-white font-bold rounded-full hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
-             Quero o conteúdo completo em PDF
+        <div className="mt-16 text-center">
+           <button className="px-12 py-6 bg-transparent border border-brand-gold text-brand-gold font-bold text-xs tracking-[0.3em] uppercase hover:bg-brand-gold hover:text-brand-ivory transition-all shadow-xl">
+             Download Programa Completo PDF
            </button>
         </div>
       </div>
@@ -380,25 +377,26 @@ export function ModulesSection() {
 
 export function TimelineSection() {
   return (
-    <section className="py-24 bg-white border-y border-border/50">
+    <section className="py-24 bg-white border-y border-brand-gold/10">
       <div className="container mx-auto px-4 md:px-6">
-        <h2 className="text-3xl font-heading font-bold text-center mb-16">Como funciona sua jornada</h2>
+        <span className="text-brand-gold text-xs font-bold tracking-[0.4em] uppercase mb-4 block text-center">Jornada</span>
+        <h2 className="text-3xl font-heading font-medium text-center mb-20 text-brand-gold uppercase tracking-tight">Metodologia <span className="italic font-light opacity-80">de Alto Impacto</span></h2>
         <div className="relative">
-          <div className="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gray-200 -translate-y-1/2 z-0"></div>
+          <div className="hidden md:block absolute top-1/2 left-0 w-full h-[1px] bg-brand-gold/10 -translate-y-1/2 z-0"></div>
           
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 relative z-10">
             {[
               { icon: BookOpen, title: "Aulas Online", desc: "Ao vivo e gravadas" },
               { icon: Users, title: "Mentoria", desc: "Encontros com experts" },
               { icon: Microscope, title: "Prática", desc: "Discussão de casos" },
               { icon: Award, title: "Certificação", desc: "Reconhecida pelo MEC" }
             ].map((step, i) => (
-              <div key={i} className="flex flex-col items-center text-center bg-white p-4">
-                <div className="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center mb-4 shadow-lg ring-4 ring-white">
-                  <step.icon className="w-8 h-8" />
+              <div key={i} className="flex flex-col items-center text-center bg-white p-6">
+                <div className="w-20 h-20 bg-brand-ivory border border-brand-gold/20 text-brand-gold flex items-center justify-center mb-6 shadow-xl ring-8 ring-white group-hover:bg-brand-gold group-hover:text-white transition-all duration-500">
+                  <step.icon className="w-8 h-8" strokeWidth={1} />
                 </div>
-                <h3 className="text-lg font-bold mb-1">{step.title}</h3>
-                <p className="text-sm text-muted-foreground">{step.desc}</p>
+                <h3 className="text-sm font-medium mb-2 tracking-widest uppercase text-brand-gold">{step.title}</h3>
+                <p className="text-xs text-brand-gold/50 font-light tracking-wide">{step.desc}</p>
               </div>
             ))}
           </div>
@@ -410,17 +408,16 @@ export function TimelineSection() {
 
 export function PartnersSection() {
   return (
-    <section className="py-16 bg-muted/30">
+    <section className="py-20 bg-brand-ivory border-b border-brand-gold/10">
       <div className="container mx-auto px-4 md:px-6 text-center">
-        <p className="text-sm font-bold text-muted-foreground uppercase tracking-widest mb-8">Certificação e Parceria</p>
-        <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-80 grayscale hover:grayscale-0 transition-all duration-500">
-           <div className="text-2xl font-heading font-black text-primary flex items-center gap-2">
-             <Leaf className="w-8 h-8" />
+        <p className="text-[10px] font-bold text-brand-gold/40 uppercase tracking-[0.5em] mb-12">Chancela e Credibilidade</p>
+        <div className="flex flex-wrap justify-center items-center gap-16 md:gap-32 opacity-60 hover:opacity-100 transition-all duration-700 grayscale hover:grayscale-0">
+           <div className="text-xl font-heading font-light text-brand-gold tracking-[0.2em] uppercase flex items-center gap-4">
+             <Leaf className="w-6 h-6" strokeWidth={1} />
              Plantando Conhecimento
            </div>
-           <div className="text-2xl font-heading font-bold text-gray-700 flex items-center gap-2">
-             <HeartHandshake className="w-8 h-8" />
-             Universidade Anhanguera
+           <div className="text-xl font-heading font-medium text-brand-gold tracking-[0.2em] uppercase flex items-center gap-4 border-l border-brand-gold/20 pl-16">
+             Anhanguera
            </div>
         </div>
       </div>
@@ -432,21 +429,22 @@ export function TestimonialsSection() {
   return (
     <section className="py-24 bg-white">
       <div className="container mx-auto px-4 md:px-6">
-        <h2 className="text-3xl font-heading font-bold text-center mb-16">Quem já está transformando a carreira</h2>
-        <div className="grid md:grid-cols-3 gap-8">
+        <span className="text-brand-gold text-xs font-bold tracking-[0.4em] uppercase mb-4 block text-center">Testemunhos</span>
+        <h2 className="text-3xl font-heading font-medium text-center mb-20 text-brand-gold uppercase tracking-tight">Excelência <span className="italic font-light opacity-80">Reconhecida</span></h2>
+        <div className="grid md:grid-cols-3 gap-12">
           {[1, 2, 3].map((i) => (
-            <div key={i} className="bg-background p-8 rounded-2xl border border-border/50 shadow-sm relative">
-              <div className="text-primary text-4xl font-serif absolute top-6 right-6">"</div>
-              <p className="text-muted-foreground mb-6 italic">
+            <div key={i} className="bg-brand-ivory p-12 rounded-none border border-brand-gold/10 shadow-sm relative group hover:shadow-2xl transition-all duration-700">
+              <div className="text-brand-gold/10 text-8xl font-serif absolute -top-4 -left-2 pointer-events-none italic">"</div>
+              <p className="text-brand-gold/70 mb-10 italic font-light leading-relaxed relative z-10 text-sm">
                 "Essa pós-graduação mudou completamente minha visão clínica. Hoje consigo tratar pacientes que antes eu considerava sem solução."
               </p>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-gray-200 overflow-hidden">
-                  <img src={`https://ui-avatars.com/api/?name=Vet+${i}&background=0D1117&color=fff`} alt="Avatar" />
+              <div className="flex items-center gap-6 border-t border-brand-gold/10 pt-8">
+                <div className="w-14 h-14 rounded-none bg-brand-gold/10 p-[1px] grayscale group-hover:grayscale-0 transition-all duration-700">
+                  <img src={`https://ui-avatars.com/api/?name=Vet+${i}&background=b89b5e&color=fff&rounded=false`} alt="Avatar" className="w-full h-full object-cover" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-sm">Dra. Ana Souza</h4>
-                  <p className="text-xs text-muted-foreground">Veterinária Integrativa</p>
+                  <h4 className="font-medium text-brand-gold uppercase tracking-widest text-xs">Dra. Ana Souza</h4>
+                  <p className="text-[10px] text-brand-gold/50 uppercase tracking-widest font-bold mt-1">Veterinária Integrativa</p>
                 </div>
               </div>
             </div>
@@ -459,12 +457,13 @@ export function TestimonialsSection() {
 
 export function GuaranteeSection() {
   return (
-    <section className="py-16 bg-background border-t border-border">
+    <section className="py-24 bg-brand-ivory border-t border-brand-gold/10">
       <div className="container mx-auto px-4 md:px-6 flex flex-col items-center text-center">
-        <ShieldCheck className="w-16 h-16 text-primary mb-6" />
-        <h2 className="text-2xl font-bold mb-2">Garantia Incondicional de 14 Dias</h2>
-        <p className="text-muted-foreground max-w-lg mb-8">
-          Se você não sentir que este conteúdo é para você, devolvemos 100% do seu investimento. Seu risco é zero.
+        <ShieldCheck className="w-16 h-16 text-brand-gold mb-10 opacity-40" strokeWidth={1} />
+        <span className="text-brand-gold text-xs font-bold tracking-[0.4em] uppercase mb-4 block">Segurança Incondicional</span>
+        <h2 className="text-2xl font-medium mb-4 text-brand-gold uppercase tracking-widest">Compromisso com sua Satisfação</h2>
+        <p className="text-brand-gold/60 max-w-xl mb-8 font-light leading-relaxed">
+          Se você não sentir que este conteúdo é para você, devolvemos 100% do seu investimento dentro de 14 dias. Seu risco é zero.
         </p>
       </div>
     </section>

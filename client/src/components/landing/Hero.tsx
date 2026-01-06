@@ -29,17 +29,17 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-5xl md:text-7xl lg:text-9xl font-heading font-medium text-brand-green leading-[0.95] mb-12 tracking-tighter"
+            className="text-5xl md:text-7xl lg:text-9xl font-heading font-medium text-brand-gold leading-[0.95] mb-12 tracking-tighter uppercase"
           >
             Lidere a <br/>
-            <span className="text-brand-gold italic font-light">Nova Era</span> Clínica
+            <span className="italic font-light opacity-80">Nova Era</span> Clínica
           </motion.h1>
           
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-lg md:text-2xl text-brand-green/60 mb-16 max-w-3xl leading-relaxed font-light tracking-wide"
+            className="text-lg md:text-2xl text-brand-gold/60 mb-16 max-w-3xl leading-relaxed font-light tracking-wide"
           >
             Domine a ciência do sistema endocanabinoide na 1ª Pós-graduação do mundo dedicada a veterinários de alta performance.
           </motion.p>
