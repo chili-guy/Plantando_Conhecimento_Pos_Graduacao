@@ -409,7 +409,7 @@ export function TimelineSection() {
 }
 
 import anhangueraLogo from "@assets/image_1767725302166.png";
-import plantandoLogo from "@assets/image_1767725350933.png";
+import plantandoLogo from "@assets/image_1767725634656.png";
 
 export function PartnersSection() {
   return (

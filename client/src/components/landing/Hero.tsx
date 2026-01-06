@@ -3,7 +3,7 @@ import { ArrowRight, Microscope, ShieldCheck, Award, Users } from "lucide-react"
 import heroBg from "@assets/generated_images/minimalist_modern_medical_architecture_interior.png";
 
 import anhangueraLogo from "@assets/image_1767725302166.png";
-import plantandoLogo from "@assets/image_1767725350933.png";
+import plantandoLogo from "@assets/image_1767725634656.png";
 
 export function Hero() {
   return (
@@ -28,7 +28,7 @@ export function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-3 px-6 py-2 border-l border-r border-brand-gold/40 text-brand-gold text-xs font-bold tracking-[0.3em] uppercase mb-12"
+            className="text-brand-gold text-xs font-bold tracking-[0.3em] uppercase mb-12"
           >
             A Excelência em Endocanabinologia
           </motion.div>
@@ -62,26 +62,6 @@ export function Hero() {
               SOLICITAR MATRÍCULA
               <ArrowRight className="inline-block ml-6 w-5 h-5 transition-transform group-hover:translate-x-1" />
             </button>
-          </motion.div>
-
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.5 }}
-            className="flex flex-wrap justify-center gap-12 md:gap-24 mt-24 pt-12 border-t border-brand-gold/10 w-full max-w-4xl"
-          >
-            <div className="flex flex-col items-center gap-3">
-              <span className="text-brand-gold text-sm font-bold tracking-[0.2em] uppercase">Certificação MEC</span>
-              <div className="w-8 h-[1px] bg-brand-gold/20"></div>
-            </div>
-            <div className="flex flex-col items-center gap-3">
-              <span className="text-brand-gold text-sm font-bold tracking-[0.2em] uppercase">Base Científica</span>
-              <div className="w-8 h-[1px] bg-brand-gold/20"></div>
-            </div>
-            <div className="flex flex-col items-center gap-3">
-              <span className="text-brand-gold text-sm font-bold tracking-[0.2em] uppercase">Mentoria Expert</span>
-              <div className="w-8 h-[1px] bg-brand-gold/20"></div>
-            </div>
           </motion.div>
         </div>
       </div>
