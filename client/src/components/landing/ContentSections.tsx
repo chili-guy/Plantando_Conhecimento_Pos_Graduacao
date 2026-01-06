@@ -109,13 +109,13 @@ export function SolutionSection() {
             <motion.div 
               key={i}
               variants={fadeIn}
-              className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-border/50 text-center flex flex-col items-center"
+              className="bg-white p-10 rounded-none shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] transition-all duration-500 border border-border/20 text-center flex flex-col items-center group"
             >
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
-                <card.icon className="w-6 h-6 text-primary" />
+              <div className="w-16 h-16 bg-brand-green/5 rounded-full flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+                <card.icon className="w-6 h-6 text-brand-gold" strokeWidth={1.5} />
               </div>
-              <h3 className="text-xl font-bold mb-3">{card.title}</h3>
-              <p className="text-muted-foreground">{card.desc}</p>
+              <h3 className="text-xl font-medium mb-4 tracking-tight uppercase">{card.title}</h3>
+              <p className="text-muted-foreground font-light leading-relaxed">{card.desc}</p>
             </motion.div>
           ))}
         </motion.div>

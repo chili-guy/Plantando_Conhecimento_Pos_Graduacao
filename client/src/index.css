@@ -9,56 +9,72 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
   
-  /* Brand Colors */
-  --color-brand-green: hsl(155 45% 15%);     /* Deep Green */
-  --color-brand-light: hsl(150 20% 96%);     /* Very Light Green/Off-white */
-  --color-brand-gold: hsl(45 60% 60%);       /* Soft Gold */
-  --color-brand-accent: hsl(140 80% 60%);    /* Neon Green (Discrete) */
+  /* High-Ticket Premium Brand Colors */
+  --color-brand-green: hsl(165 40% 8%);      /* Deep, near-black emerald */
+  --color-brand-light: hsl(45 15% 98%);      /* Sophisticated warm off-white */
+  --color-brand-gold: hsl(45 40% 55%);       /* Muted brass/gold */
+  --color-brand-accent: hsl(165 40% 15%);    /* Subtle emerald accent */
 
   --color-background: var(--color-brand-light);
-  --color-foreground: hsl(155 45% 10%);
+  --color-foreground: var(--color-brand-green);
 
   --color-card: hsl(0 0% 100%);
-  --color-card-foreground: hsl(155 45% 10%);
+  --color-card-foreground: var(--color-brand-green);
 
   --color-popover: hsl(0 0% 100%);
-  --color-popover-foreground: hsl(155 45% 10%);
+  --color-popover-foreground: var(--color-brand-green);
 
   --color-primary: var(--color-brand-green);
-  --color-primary-foreground: hsl(0 0% 100%);
+  --color-primary-foreground: var(--color-brand-light);
 
-  --color-secondary: hsl(155 10% 90%);
+  --color-secondary: hsl(165 10% 92%);
   --color-secondary-foreground: var(--color-brand-green);
 
-  --color-muted: hsl(210 20% 96%);
-  --color-muted-foreground: hsl(215 16% 47%);
+  --color-muted: hsl(165 5% 94%);
+  --color-muted-foreground: hsl(165 10% 40%);
 
   --color-accent: var(--color-brand-gold);
-  --color-accent-foreground: hsl(0 0% 100%);
+  --color-accent-foreground: var(--color-brand-light);
 
-  --color-destructive: hsl(0 84% 60%);
+  --color-destructive: hsl(0 50% 45%);
   --color-destructive-foreground: hsl(0 0% 98%);
 
-  --color-border: hsl(155 10% 90%);
-  --color-input: hsl(155 10% 90%);
-  --color-ring: var(--color-brand-green);
+  --color-border: hsl(165 10% 88%);
+  --color-input: hsl(165 10% 90%);
+  --color-ring: var(--color-brand-gold);
 
   --font-sans: 'Inter', sans-serif;
   --font-heading: 'Montserrat', sans-serif;
   
-  --radius: 0.5rem;
+  --radius: 0.25rem; /* Sharper corners for a more architectural/premium feel */
 }
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border/40;
   }
   body {
-    @apply font-sans antialiased bg-background text-foreground;
+    @apply font-sans antialiased bg-background text-foreground selection:bg-brand-gold/20;
+    background-image: radial-gradient(circle at 50% 50%, rgba(212, 225, 55, 0.02) 0%, transparent 100%);
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading font-bold tracking-tight;
+    @apply font-heading font-semibold tracking-tight; /* Semibold is often more elegant than Bold */
   }
+}
+
+/* Texture and Depth */
+.premium-shadow {
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.glass-panel {
+  @apply bg-white/40 backdrop-blur-md border border-white/20;
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #b89b5e 0%, #d4b475 50%, #b89b5e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Custom Animations */

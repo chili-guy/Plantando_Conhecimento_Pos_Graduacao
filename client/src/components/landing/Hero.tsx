@@ -32,29 +32,29 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-heading font-black text-white leading-tight mb-8 tracking-tighter"
+            className="text-4xl md:text-6xl lg:text-8xl font-heading font-medium text-white leading-[1.05] mb-8 tracking-tighter"
           >
-            Lidere a <span className="text-[#d4e137]">Nova Era</span> da <br className="hidden md:block" /> Medicina Veterinária
+            Lidere a <span className="italic font-light opacity-90">Nova Era</span> da <br className="hidden md:block" /> Medicina Veterinária
           </motion.h1>
           
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-lg md:text-xl text-white/70 mb-12 max-w-2xl leading-relaxed"
+            className="text-lg md:text-2xl text-white/60 mb-12 max-w-3xl leading-relaxed font-light tracking-wide"
           >
             Domine a ciência do sistema endocanabinoide e transforme sua prática clínica com terapias inovadoras e seguras.
           </motion.p>
           
           <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-6 w-full justify-center"
           >
-            <button className="bg-[#f97316] hover:bg-[#ea580c] text-white font-bold text-lg px-12 py-5 rounded-full transition-all shadow-[0_10px_40px_rgba(249,115,22,0.3)] hover:shadow-[0_15px_50px_rgba(249,115,22,0.5)] hover:-translate-y-1 group">
-              QUERO ME DIFERENCIAR AGORA
-              <ArrowRight className="inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <button className="bg-[#b89b5e] hover:bg-[#a68a4d] text-white font-medium text-lg px-16 py-6 rounded-none transition-all shadow-2xl hover:-translate-y-1 group tracking-[0.2em] uppercase">
+              RESERVAR MINHA VAGA
+              <ArrowRight className="inline-block ml-4 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
           </motion.div>
 
