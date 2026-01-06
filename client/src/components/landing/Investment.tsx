@@ -5,7 +5,7 @@ export function InvestmentSection() {
   return (
     <section className="py-24 bg-foreground relative overflow-hidden text-white">
       {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3"></div>
+      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-primary/20 rounded-full blur-[60px] -translate-y-1/2 translate-x-1/3"></div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 items-center">
@@ -34,12 +34,7 @@ export function InvestmentSection() {
             </ul>
           </div>
 
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="bg-white text-foreground p-8 rounded-2xl shadow-2xl relative"
-          >
+          <div className="bg-white text-foreground p-8 rounded-2xl shadow-2xl relative">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-accent text-foreground font-bold px-4 py-1 rounded-full text-sm shadow-lg">
               Vagas Limitadas
             </div>
@@ -54,7 +49,7 @@ export function InvestmentSection() {
               <p className="text-sm text-muted-foreground font-medium">ou R$ 9.997,00 à vista</p>
             </div>
 
-            <button className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 px-6 rounded-xl text-lg transition-all shadow-lg shadow-primary/30 hover:shadow-primary/50 hover:-translate-y-1">
+            <button className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 px-6 rounded-xl text-lg transition-[background-color] duration-200 shadow-lg shadow-primary/30">
               Garantir minha vaga agora
             </button>
             
@@ -62,7 +57,7 @@ export function InvestmentSection() {
               <span className="w-2 h-2 rounded-full bg-green-500"></span>
               Compra 100% segura
             </p>
-          </motion.div>
+          </div>
 
         </div>
       </div>

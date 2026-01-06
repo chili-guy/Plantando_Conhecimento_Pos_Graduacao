@@ -12,16 +12,7 @@ export function ProblemSection() {
     <section className="py-24 bg-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <motion.div 
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={{
-              hidden: { opacity: 0, y: 20 },
-              visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
-            }}
-            className="space-y-6"
-          >
+          <div className="space-y-6">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">
               A medicina veterinária mudou — <span className="text-primary">e sua formação acompanhou essa evolução?</span>
             </h2>
@@ -43,24 +34,15 @@ export function ProblemSection() {
                 ))}
               </ul>
             </div>
-          </motion.div>
-          <motion.div 
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={{
-              hidden: { opacity: 0, y: 20 },
-              visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
-            }}
-            className="relative"
-          >
-            <div className="absolute -inset-4 bg-primary/10 rounded-2xl -z-10 blur-xl"></div>
+          </div>
+          <div className="relative">
+            <div className="absolute -inset-4 bg-primary/10 rounded-2xl -z-10 blur-md"></div>
             <img 
               src="/cannabis-dog.png" 
               alt="Administração de cannabis medicinal em cão" 
               className="rounded-xl shadow-2xl w-full h-auto object-cover"
             />
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
@@ -86,38 +68,20 @@ export function SolutionSection() {
           <div className="w-20 h-[1px] bg-brand-gold/30 mx-auto"></div>
         </div>
 
-        <motion.div 
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={{
-            hidden: { opacity: 0 },
-            visible: {
-              opacity: 1,
-              transition: {
-                staggerChildren: 0.1
-              }
-            }
-          }}
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-12"
-        >
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {cards.map((card, i) => (
-            <motion.div 
+            <div 
               key={i}
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
-              }}
               className="bg-brand-ivory p-12 shadow-[0_4px_30px_rgba(0,0,0,0.02)] border border-brand-gold/10 text-center flex flex-col items-center group"
             >
-              <div className="w-16 h-16 bg-brand-gold/5 rounded-full flex items-center justify-center mb-10 group-hover:bg-brand-gold group-hover:text-white transition-all duration-700">
-                <card.icon className="w-6 h-6 text-brand-gold group-hover:text-brand-ivory transition-colors" strokeWidth={1} />
+              <div className="w-16 h-16 bg-brand-gold/5 rounded-full flex items-center justify-center mb-10 group-hover:bg-brand-gold group-hover:text-white transition-[background-color,color] duration-200">
+                <card.icon className="w-6 h-6 text-brand-gold group-hover:text-brand-ivory transition-[color] duration-200" strokeWidth={1} />
               </div>
               <h3 className="text-lg font-medium mb-6 tracking-[0.1em] uppercase">{card.title}</h3>
               <p className="text-muted-foreground font-light leading-relaxed text-sm">{card.desc}</p>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
@@ -137,12 +101,7 @@ export function WhatIsSection() {
           <div className="flex justify-center">
             
             {/* Left Content */}
-            <motion.div 
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="max-w-3xl space-y-10"
-            >
+            <div className="max-w-3xl space-y-10">
               <div>
                 <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-6 block">Conhecimento Fundamental</span>
                 <h2 className="text-4xl md:text-6xl font-heading font-medium text-white leading-tight">
@@ -166,14 +125,14 @@ export function WhatIsSection() {
                     desc: "Permite intervenções terapêuticas direcionadas e altamente eficazes." 
                   }
                 ].map((item, i) => (
-                  <div key={i} className="group p-8 bg-white/5 border border-white/10 hover:border-brand-gold/50 transition-all duration-500">
-                    <div className="w-8 h-[1px] bg-brand-gold mb-6 group-hover:w-full transition-all duration-700"></div>
+                  <div key={i} className="group p-8 bg-white/5 border border-white/10 hover:border-brand-gold/50 transition-[border-color] duration-200">
+                    <div className="w-8 h-[1px] bg-brand-gold mb-6 group-hover:w-full transition-[width] duration-200"></div>
                     <h4 className="text-brand-gold font-bold text-xs uppercase tracking-widest mb-3">{item.title}</h4>
                     <p className="text-white/40 text-sm font-light leading-relaxed">{item.desc}</p>
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
 
 
           </div>
@@ -202,8 +161,8 @@ export function UniqueSection() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {features.map((f, i) => (
             <div key={i} className="bg-brand-ivory p-12 shadow-[0_4px_30px_rgba(0,0,0,0.02)] border border-brand-gold/10 text-center flex flex-col items-center group">
-              <div className="w-16 h-16 bg-brand-gold/5 rounded-full flex items-center justify-center mb-10 group-hover:bg-brand-gold group-hover:text-white transition-all duration-700">
-                <Award className="w-6 h-6 text-brand-gold group-hover:text-brand-ivory transition-colors" strokeWidth={1} />
+              <div className="w-16 h-16 bg-brand-gold/5 rounded-full flex items-center justify-center mb-10 group-hover:bg-brand-gold group-hover:text-white transition-[background-color,color] duration-200">
+                <Award className="w-6 h-6 text-brand-gold group-hover:text-brand-ivory transition-[color] duration-200" strokeWidth={1} />
               </div>
               <h3 className="text-lg font-medium mb-6 tracking-[0.1em] uppercase">{f.title}</h3>
               <p className="text-muted-foreground font-light leading-relaxed text-sm">{f.desc}</p>
@@ -386,7 +345,7 @@ export function ModulesSection() {
         </div>
         
         <div className="mt-12 text-center">
-           <button className="px-8 py-4 bg-primary text-white font-bold rounded-full hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
+           <button className="px-8 py-4 bg-primary text-white font-bold rounded-full hover:bg-primary/90 transition-[background-color] duration-200 shadow-lg shadow-primary/20">
              Quero o conteúdo completo em PDF
            </button>
         </div>
@@ -409,8 +368,8 @@ export function TimelineSection() {
             { icon: Award, title: "Certificação", desc: "Reconhecida pelo MEC" }
           ].map((step, i) => (
             <div key={i} className="bg-brand-ivory p-12 shadow-[0_4px_30px_rgba(0,0,0,0.02)] border border-brand-gold/10 text-center flex flex-col items-center group">
-              <div className="w-16 h-16 bg-brand-gold/5 rounded-full flex items-center justify-center mb-10 group-hover:bg-brand-gold group-hover:text-white transition-all duration-700">
-                <step.icon className="w-6 h-6 text-brand-gold group-hover:text-brand-ivory transition-colors" strokeWidth={1} />
+              <div className="w-16 h-16 bg-brand-gold/5 rounded-full flex items-center justify-center mb-10 group-hover:bg-brand-gold group-hover:text-white transition-[background-color,color] duration-200">
+                <step.icon className="w-6 h-6 text-brand-gold group-hover:text-brand-ivory transition-[color] duration-200" strokeWidth={1} />
               </div>
               <h3 className="text-lg font-medium mb-6 tracking-[0.1em] uppercase">{step.title}</h3>
               <p className="text-muted-foreground font-light leading-relaxed text-sm">{step.desc}</p>
