@@ -125,47 +125,54 @@ export function SolutionSection() {
 
 export function WhatIsSection() {
   return (
-    <section className="py-24 bg-foreground text-white overflow-hidden relative">
-      <div className="absolute inset-0 z-0 opacity-20">
-         <img src={scienceImage} alt="Sistema Endocanabinoide" className="w-full h-full object-cover" />
-      </div>
-      <div className="absolute inset-0 bg-gradient-to-r from-foreground via-foreground/90 to-transparent z-10"></div>
-      
+    <section className="py-32 bg-brand-green text-brand-ivory overflow-hidden relative">
       <div className="container mx-auto px-4 md:px-6 relative z-20">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeIn}
+            className="order-2 lg:order-1"
           >
-            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6 text-white">
-              O que é o <span className="text-accent">Sistema Endocanabinoide?</span>
+            <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-6 block">Fundamentos</span>
+            <h2 className="text-4xl md:text-5xl font-heading font-medium mb-8 leading-tight">
+              O que é o <br/> <span className="text-brand-gold italic font-light">Sistema Endocanabinoide?</span>
             </h2>
-            <p className="text-gray-300 text-lg mb-6 leading-relaxed">
+            <p className="text-brand-ivory/60 text-lg mb-10 leading-relaxed font-light">
               Descoberto há poucas décadas, é o maestro fisiológico do organismo. 
               Ele regula o equilíbrio (homeostase) de quase todos os sistemas do corpo animal, 
               desde o controle da dor e inflamação até o humor e apetite.
             </p>
-            <div className="space-y-4">
-              <div className="flex gap-4 p-4 bg-white/5 rounded-lg backdrop-blur-sm border border-white/10">
-                <div className="w-1 h-full bg-accent rounded-full"></div>
-                <div>
-                  <h4 className="font-bold text-accent mb-1">Essencial para a Saúde</h4>
-                  <p className="text-sm text-gray-300">Sem ele, o corpo não responde adequadamente a doenças.</p>
-                </div>
+            <div className="space-y-6">
+              <div className="p-8 bg-white/5 border border-brand-gold/10 hover:border-brand-gold/30 transition-colors">
+                <h4 className="font-bold text-brand-gold text-sm uppercase tracking-widest mb-3">Essencial para a Saúde</h4>
+                <p className="text-sm text-brand-ivory/50 font-light leading-relaxed">Sem ele, o corpo não responde adequadamente a doenças e desequilíbrios internos.</p>
               </div>
-              <div className="flex gap-4 p-4 bg-white/5 rounded-lg backdrop-blur-sm border border-white/10">
-                <div className="w-1 h-full bg-accent rounded-full"></div>
-                <div>
-                  <h4 className="font-bold text-accent mb-1">Uso Ético e Seguro</h4>
-                  <p className="text-sm text-gray-300">A cannabis medicinal atua diretamente nesses receptores para restaurar o equilíbrio.</p>
-                </div>
+              <div className="p-8 bg-white/5 border border-brand-gold/10 hover:border-brand-gold/30 transition-colors">
+                <h4 className="font-bold text-brand-gold text-sm uppercase tracking-widest mb-3">Uso Ético e Seguro</h4>
+                <p className="text-sm text-brand-ivory/50 font-light leading-relaxed">A cannabis medicinal atua diretamente nesses receptores para restaurar a homeostase natural.</p>
               </div>
             </div>
           </motion.div>
-          <div className="hidden md:block">
-          </div>
+          
+          <motion.div 
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+            className="order-1 lg:order-2 relative"
+          >
+            <div className="absolute -inset-10 bg-brand-gold/5 rounded-full blur-[100px]"></div>
+            <img 
+              src={scienceImage} 
+              alt="Representação Científica do Sistema Endocanabinoide" 
+              className="relative z-10 w-full h-auto grayscale brightness-75 hover:grayscale-0 transition-all duration-1000"
+            />
+            {/* Decorative Gold Elements */}
+            <div className="absolute top-0 right-0 w-24 h-24 border-t border-r border-brand-gold/20"></div>
+            <div className="absolute bottom-0 left-0 w-24 h-24 border-b border-l border-brand-gold/20"></div>
+          </motion.div>
         </div>
       </div>
     </section>
