@@ -27,9 +27,9 @@ export function Hero() {
             A Excelência em Endocanabinologia
           </div>
 
-          <h1 className="text-4xl md:text-6xl lg:text-8xl font-heading font-medium text-white leading-[1.15] mb-12 tracking-tighter">
+          <h1 className="text-4xl md:text-6xl lg:text-8xl font-heading font-bold text-white leading-[1.15] mb-12 tracking-tighter">
             Lidere a <br/>
-            <span className="bg-gradient-to-r from-[#E75C23] to-[#F89C22] bg-clip-text text-transparent italic font-light inline-block">Nova Era</span> Clínica
+            <span className="bg-gradient-to-r from-[#E75C23] to-[#F89C22] bg-clip-text text-transparent font-bold inline-block">Nova Era</span> Clínica
           </h1>
           
           <p className="text-lg md:text-2xl text-white/80 mb-16 max-w-3xl leading-relaxed font-light tracking-wide">
