@@ -17,13 +17,6 @@ export function Hero() {
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        {/* Logos Header - Discreto e Premium */}
-        <div className="absolute top-8 left-1/2 -translate-x-1/2 flex items-center gap-12 opacity-80 grayscale hover:grayscale-0 transition-all duration-700">
-          <img src={anhangueraLogo} alt="Anhanguera" className="h-10 md:h-12 w-auto object-contain" />
-          <div className="w-[1px] h-8 bg-brand-gold/20"></div>
-          <img src={plantandoLogo} alt="Plantando Conhecimento" className="h-10 md:h-12 w-auto object-contain" />
-        </div>
-
         <div className="flex flex-col items-center text-center max-w-5xl mx-auto mt-20">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
