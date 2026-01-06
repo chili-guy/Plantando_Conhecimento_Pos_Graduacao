@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Microscope, ShieldCheck, Award, Users } from "lucide-react";
 import heroBg from "@assets/generated_images/minimalist_modern_medical_architecture_interior.png";
-import { FloatingBubbles } from "./FloatingBubbles";
 
 import anhangueraLogo from "@assets/image_1767725302166.png";
 import plantandoLogo from "@assets/image-removebg-preview_1767725759434.png";
