@@ -124,13 +124,14 @@ export function SolutionSection() {
 }
 
 import infographicImage from "@assets/generated_images/premium_scientific_infographic_of_endocannabinoid_system_connectivity.png";
+import scienceImage from "@assets/generated_images/abstract_endocannabinoid_system_illustration.png";
 
 export function WhatIsSection() {
   return (
     <section className="py-32 bg-[#062d2d] relative overflow-hidden">
-      {/* Background Texture & Depth */}
+      {/* Background Texture & Depth - Using the old scienceImage as requested */}
       <div className="absolute inset-0 z-0 opacity-20">
-        <img src={infographicImage} alt="" className="w-full h-full object-cover mix-blend-overlay" />
+        <img src={scienceImage} alt="" className="w-full h-full object-cover mix-blend-overlay" />
       </div>
       <div className="absolute inset-0 bg-gradient-to-b from-[#062d2d] via-transparent to-[#062d2d] z-10"></div>
       
