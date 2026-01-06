@@ -125,54 +125,81 @@ export function SolutionSection() {
 
 export function WhatIsSection() {
   return (
-    <section className="py-32 bg-brand-green text-brand-ivory overflow-hidden relative">
+    <section className="py-32 bg-[#062d2d] relative overflow-hidden">
+      {/* Background Texture & Depth */}
+      <div className="absolute inset-0 z-0 opacity-20">
+        <img src={scienceImage} alt="" className="w-full h-full object-cover mix-blend-overlay" />
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-b from-[#062d2d] via-transparent to-[#062d2d] z-10"></div>
+      
       <div className="container mx-auto px-4 md:px-6 relative z-20">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeIn}
-            className="order-2 lg:order-1"
-          >
-            <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-6 block">Fundamentos</span>
-            <h2 className="text-4xl md:text-5xl font-heading font-medium mb-8 leading-tight">
-              O que é o <br/> <span className="text-brand-gold italic font-light">Sistema Endocanabinoide?</span>
-            </h2>
-            <p className="text-brand-ivory/60 text-lg mb-10 leading-relaxed font-light">
-              Descoberto há poucas décadas, é o maestro fisiológico do organismo. 
-              Ele regula o equilíbrio (homeostase) de quase todos os sistemas do corpo animal, 
-              desde o controle da dor e inflamação até o humor e apetite.
-            </p>
-            <div className="space-y-6">
-              <div className="p-8 bg-white/5 border border-brand-gold/10 hover:border-brand-gold/30 transition-colors">
-                <h4 className="font-bold text-brand-gold text-sm uppercase tracking-widest mb-3">Essencial para a Saúde</h4>
-                <p className="text-sm text-brand-ivory/50 font-light leading-relaxed">Sem ele, o corpo não responde adequadamente a doenças e desequilíbrios internos.</p>
+        <div className="max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-12 gap-12 items-center">
+            
+            {/* Left Content */}
+            <motion.div 
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="lg:col-span-7 space-y-10"
+            >
+              <div>
+                <span className="text-brand-gold text-[10px] font-bold uppercase tracking-[0.5em] mb-6 block">Conhecimento Fundamental</span>
+                <h2 className="text-4xl md:text-6xl font-heading font-medium text-white leading-tight">
+                  O Maestro <br/> <span className="text-brand-gold italic font-light">da Homeostase Animal</span>
+                </h2>
               </div>
-              <div className="p-8 bg-white/5 border border-brand-gold/10 hover:border-brand-gold/30 transition-colors">
-                <h4 className="font-bold text-brand-gold text-sm uppercase tracking-widest mb-3">Uso Ético e Seguro</h4>
-                <p className="text-sm text-brand-ivory/50 font-light leading-relaxed">A cannabis medicinal atua diretamente nesses receptores para restaurar a homeostase natural.</p>
+
+              <p className="text-white/70 text-lg md:text-xl leading-relaxed font-light max-w-2xl border-l-2 border-brand-gold/30 pl-8">
+                O Sistema Endocanabinoide é o principal sistema regulador do organismo. 
+                Ele atua como um maestro, garantindo que todos os outros sistemas trabalhem em perfeita harmonia.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                {[
+                  { 
+                    title: "Equilíbrio Sistêmico", 
+                    desc: "Regula dor, inflamação, humor e apetite em todos os vertebrados." 
+                  },
+                  { 
+                    title: "Medicina de Precisão", 
+                    desc: "Permite intervenções terapêuticas direcionadas e altamente eficazes." 
+                  }
+                ].map((item, i) => (
+                  <div key={i} className="group p-8 bg-white/5 border border-white/10 hover:border-brand-gold/50 transition-all duration-500">
+                    <div className="w-8 h-[1px] bg-brand-gold mb-6 group-hover:w-full transition-all duration-700"></div>
+                    <h4 className="text-brand-gold font-bold text-xs uppercase tracking-widest mb-3">{item.title}</h4>
+                    <p className="text-white/40 text-sm font-light leading-relaxed">{item.desc}</p>
+                  </div>
+                ))}
               </div>
-            </div>
-          </motion.div>
-          
-          <motion.div 
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1 }}
-            className="order-1 lg:order-2 relative"
-          >
-            <div className="absolute -inset-10 bg-brand-gold/5 rounded-full blur-[100px]"></div>
-            <img 
-              src={scienceImage} 
-              alt="Representação Científica do Sistema Endocanabinoide" 
-              className="relative z-10 w-full h-auto grayscale brightness-75 hover:grayscale-0 transition-all duration-1000"
-            />
-            {/* Decorative Gold Elements */}
-            <div className="absolute top-0 right-0 w-24 h-24 border-t border-r border-brand-gold/20"></div>
-            <div className="absolute bottom-0 left-0 w-24 h-24 border-b border-l border-brand-gold/20"></div>
-          </motion.div>
+            </motion.div>
+
+            {/* Right Visual Element */}
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="lg:col-span-5 relative group"
+            >
+              <div className="relative z-10 border border-brand-gold/20 p-4 bg-brand-green/50 backdrop-blur-sm">
+                <img 
+                  src={scienceImage} 
+                  alt="Sistema Endocanabinoide" 
+                  className="w-full h-auto grayscale group-hover:grayscale-0 transition-all duration-1000"
+                />
+                {/* Accent lines */}
+                <div className="absolute -top-4 -right-4 w-24 h-24 border-t-2 border-r-2 border-brand-gold/40"></div>
+                <div className="absolute -bottom-4 -left-4 w-24 h-24 border-b-2 border-l-2 border-brand-gold/40"></div>
+              </div>
+              
+              {/* Floating label */}
+              <div className="absolute -bottom-8 -right-8 bg-brand-gold text-brand-green px-6 py-4 text-[10px] font-bold uppercase tracking-[0.2em] shadow-2xl z-20">
+                Ciência de Vanguarda
+              </div>
+            </motion.div>
+
+          </div>
         </div>
       </div>
     </section>
