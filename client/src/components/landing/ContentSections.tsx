@@ -119,8 +119,6 @@ export function SolutionSection() {
 export function WhatIsSection() {
   return (
     <section className="py-32 bg-gradient-to-b from-[#032832] to-[#044F5F] relative overflow-hidden">
-      {/* Floating Bubbles */}
-      <FloatingBubbles count={15} color="rgba(248, 156, 34, 0.1)" />
       {/* Background Texture & Depth - Restoration of the previous background */}
       <div className="absolute inset-0 z-0 opacity-20">
         <img src={scienceImage} alt="" className="w-full h-full object-cover mix-blend-overlay" />
